@@ -118,13 +118,267 @@
 						<a href="#" class="counter__down"></a>
 					</div>
 					<a href="#" class="order">Заказать столик на НГ</a>
-				</div>
-		
+				</div>		
 			</div>
+			<!-- END content__block-->
+
+			<!--BEGIN menu-->
+			<div class="menu">
+				<div class="menu__header">
+					Меню ресторана					
+				</div>			
+				<ul class="menu__type">
+					<li><a href="#" class="menu__winter is-active-w">Зимнее меню</a></li>
+					<li><a href="#" class="menu__base">Основное меню</a></li>
+					<li><a href="#" class="menu__other">Другое</a></li>
+				</ul>
+
+				<div class="menu__article">
+					<div class="menu__title">
+						Салаты						
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Мурманская треска с ньокками из тыквы и чипсами из хамона </span>
+						<span class="weight">150 г</span>
+						<span class="price">1 430руб</span>
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Котлетки из краба со спаржей в пикантном соусе </span>
+						<span class="weight">100 г</span>
+						<span class="price">2 880руб</span>
+					</div>
+
+					<div class="menu__title">
+						Горячее
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Корень козлобородника с черным тосканским трюфелем </span>
+						<span class="weight">130 г</span>
+						<span class="price">1 770руб</span>
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Запеченный костный мозг с салатом из петрушки, каперсов и белого лука </span>
+						<span class="weight">100 г</span>
+						<span class="price">2 880руб</span>
+					</div>									
+					<div class="menu__pos">
+						<span class="dish">Полдюжины французских виноградных улиток </span>
+						<span class="weight">50/70 г</span>
+						<span class="price">1 410руб</span>
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Обжаренная фуа-гра с виноградом, листьями молодой свеклы<br />козлобородника с пеной из фуа-гра и черным тосканским трюфелем </span>
+						<span class="weight">210 г</span>
+						<span class="price">1 250руб</span>
+					</div>
+				</div>
+				<a href="#" class="menu__all">Сотреть меню полностью</a>
+			</div>
+			<!--END menu-->
+
+			<!--BEGIN comments-->
+			<div class="comments">
+				<div class="comments__header">
+					Честные отзывы
+					<a href="#">Почему честные?</a>
+				</div>
+				
+				<!-- BEGIN cycle-slideshow-->
+				<div class="cycle-slideshow" data-cycle-timeout="4000" data-cycle-slides=".comments__block" data-cycle-next="#next_comm" data-cycle-prev="#prev_comm">
+					<div class="comments__block">
+						<div class="guest">
+							<img src="img/guest1.png" alt="">
+							<div class="guest__metadata">							
+								<span class="name is-plus">Ольга красоткина</span>							
+								<div class="visit">
+									1 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">
+								Нам понравилось всё: шикарный вид из окна, красивый интерьер,вкусные десерты. Если появится возможность, еще придем!							
+							</div>
+						</div>
+						<div class="guest">
+							<div class="guest__metadata">
+								<img src="img/guest2.png" alt="">
+								<span class="name is-minus">Ольга красоткина</span>
+								<div class="visit">
+									1 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">
+								Добрый день! 12 июня 2013 я отмечал в вашем ресторане день рождения! Не смотря на полную загрузку ресторана, персонал работал быстро и внимательно, всё было отлично и супер! Очень понравилось поздравление от ресторана! Жалко что не было именных бейджей на сотрудниках - не могу перечислить их имена (( и сказать всем спасибо! Успехов и процветания вашей сети ресторанов! Мы уже третий раз в этом ресторане и обязательно вернёмся ещё! Удачи!
+							</div>
+						</div>					
+					</div>
+
+					<div class="comments__block">
+						<div class="guest">
+							<img src="img/guest1.png" alt="">
+							<div class="guest__metadata">							
+								<span class="name is-plus">Ольга красоткина</span>							
+								<div class="visit">
+									3 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">
+								У меня было плохое настроение. Я сломала ноготь и Мир ушел из под ного.
+							</div>
+						</div>
+						<div class="guest">
+							<div class="guest__metadata">
+								<img src="img/guest2.png" alt="">
+								<span class="name is-minus">Ольга красоткина</span>
+								<div class="visit">
+									4 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">								
+								Моя подруга, постоянно ела с моей тарелки и я ушла голодная.
+							</div>
+						</div>
+						<div class="guest">
+							<div class="guest__metadata">
+								<img src="img/guest1.png" alt="">
+								<span class="name is-minus">Ольга красоткина</span>
+								<div class="visit">
+									7 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">
+								Добрый день! У меня было плохое настроение. Я сломала ноготь и Мир ушел из под ного.
+							</div>
+						</div>					
+					</div>
+
+					<div class="cycle-pager"></div>
+				</div>
+				<!-- END cycle-slideshow-->
+
+				<a href="#" id="next_comm"></a>
+				<a href="#" id="prev_comm"></a>
+			</div>
+			<!--END comments-->
 		</div>
 		<!-- END content -->
+
+		<!-- BEGIN widget -->
+		<div class="sidebar">
+			<div class="sidebar__inner">
+				<div class="order">
+					<div class="order__datetime">
+						<a href="#" class="date">15 окт</a>					
+						<a href="#" class="time">20:30</a>
+						<a href="#" class="count">2</a>				
+					</div>
+					<a href="#" class="order__button">Заказать столик</a>
+					<div class="order__how">бесплатно за 2 минуты!</div>
+				</div>
+
+				<div class="widget__about">
+					<div class="check">
+						Средний чек 3500 руб.
+					</div>
+					<div class="worktoday">
+						Сегодня работает до 6 утра
+					</div>
+					<div class="point">
+						Смоленская пл., д. 3<br />м. Смоленская
+					</div>
+					<div class="usphone">
+						8 (495) 255-11-66
+					</div>					
+				</div>				
+			</div>
+			<img src="img/map.jpg" alt="">			
+		</div>
+		<!-- END widget-->
 	</div>
 	<!-- END wrapper -->
+
+	<!-- BEGIN social -->
+	<div class="social">
+		<div class="social__inner">
+			<a href="#" class="social__yandex">Мы <span></span> Яндекс</a>
+			<div class="social__count">
+				<span>638 человек</span><br />
+				сегодня бесплатно получили лучшие столики!
+			</div>
+			<div class="social__link">
+				<a href="#" class="social__fb"></a>
+				<a href="#" class="social__tw"></a>
+				<a href="#" class="social__in"></a>
+			</div>
+		</div>		
+	</div>
+	<!-- END social -->
+
+	<!-- BEGIN footer -->
+	<div class="footer">
+		<div class="footer__inner">
+			<div class="footer__description">
+				<div class="footer__logo">
+					Gettable					
+				</div>
+				<p>
+					© 2012 - 2014 GETTABLE
+					GetTable - быстрейшая служба бронирования столиков в ресторанах Москвы. Мы поможем вам выбрать, куда сходить сегодня вечером. 700+ лучших ресторанов в одном месте!
+				</p>
+				<p>
+					Закажите столик онлайн, и за 2 минуты для вас будет забронирован лучший столик абсолютно бесплатно.
+				</p>
+				<p>
+					8 (495) 255-11-66 звоните нам c 09.00 до 00.00 
+				</p>				
+			</div>
+			<!-- BEGIN footer__block -->
+			<div class="footer__block">
+				<div class="footer__header">
+					Категории					
+				</div>
+				<ul class="nav">
+					<li><a href="#">Рестораны</a></li>
+					<li><a href="#">Бары</a></li>
+					<li><a href="#">Клубы</a></li>
+					<li><a href="#">Кафе</a></li>
+					<li><a href="#">Пивные рестораны</a></li>
+					<li><a href="#">Караоке клубы</a></li>
+					<li><a href="#">Лучшие рестораны</a></li>
+					<li><a href="#">Рестораны с видом</a></li>
+					<li><a href="#">Круглосуточные</a></li>
+					<li><a href="#">Рестораны с верандой</a></li>						
+				</ul>		
+				<ul class="nav__ext">
+					<li><a href="#">Итальянские рестораны</a></li>
+					<li><a href="#">Русские рестораны</a></li>
+					<li><a href="#">Японские рестораны</a></li>
+					<li><a href="#">Грузинские рестораны</a></li>
+					<li><a href="#">Китайские рестораны</a></li>
+					<li><a href="#">Французские рестораны</a></li>
+					<li><a href="#">Европейские рестораны</a></li>
+					<li><a href="#">Американские рестораны</a></li>
+					<li><a href="#">Авторская кухня</a></li>
+					<li><a href="#">Рыбные рестораны</a></li>						
+				</ul>
+			</div>
+			<!-- END footer__block -->
+			<!-- BEGIN footer__block -->
+			<div class="footer__block">
+				<div class="footer__header">
+					Полезные ссылки					
+				</div>				
+				<ul class="nav__ext">
+					<li><a href="#">Оферта</a></li>
+					<li><a href="#">Пользовательское соглашение</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Карта сайта</a></li>					
+				</ul>
+			</div>
+			<!-- END footer__block -->
+		</div>		
+	</div>
+	<!-- END footer -->
+
 </div>
 <!-- END out-->
 <!-- load scripts -->
