@@ -1,187 +1,360 @@
-.widget__deposit
-	display: block		
-	margin: 0px 20px
-	+OpenSans	
-	height: 160px
-	position: relative
+.widgets
+	width: 295px
+	position: absolute
+	top: -90px
+	right: 0px	
+	border-radius: 4px
+	background: #fff
 
-	.deposit
-		height: 25px
-		overflow: hidden
-		padding-top: 15px
-		+OpenSans
-		font-size: 13px
-		color: #40566a		
+	.widget__order
+		display: block				
 
-		span			
-			margin-left: 59px
-			position: relative
-			color: #40566a
+		.order__datetime
+			padding: 17px 17px 0px 17px
+
+			a
+				display: inline-block
+				border: 1px solid #999999
+				+OpenSansL
+				font-size: 14px
+				color: #000				
+				height: 23px
+				padding-top: 3px				
+				position: relative					
+
+			.date
+				width: 76px
+				padding-left: 14px
+				margin-right: 7px
+
+			.date:after
+				content: ' '
+				+s(calendar)
+				position: absolute
+				top: 1px
+				right: 2px
+
+			.time
+				width: 72px
+				padding-left: 18px
+				margin-right: 7px
+
+			.time:after
+				content: ' '
+				+s(clock)
+				position: absolute
+				top: 5px
+				right: 6px
+
+			.count
+				width: 38px
+				padding-left: 16px
+
+			.count:after
+				content: ' '
+				+s(count)
+				position: absolute
+				top: 6px
+				right: 6px
+
+		.order__button
+			display: block
+			background: #6c5cbd
+			line-height: 42px
+			+OpenSansSB
 			font-size: 16px
-			border-bottom: 1px dashed #40566a
+			color: #fff
+			text-align: center
+			width: 259px
+			margin-top: 20px
+			margin-left: 18px
 
-		span:before
-			content: ' '
-			+s(deposit)
-			position: absolute
-			top: -3px
-			left: -43px
+		.order__button:hover
+			background: #564999
 
-		.hint
-			padding: 15px 15px 20px
-
-	.deposit:hover
-		cursor: pointer
-		height: 180px
-		background: #d4dde5
-		border-radius: 15px		
-		position: absolute
-		z-index: 500
-
-	p
-		margin-top: 25px
-		padding-left: 68px
-		padding-bottom: 24px
-		border-bottom: 1px solid #cccccc	
-		+OpenSans
-		font-size: 14px
-		position: absolute
-		top: 40px		
-
-	p:before
-		content: ' '
-		+s(top30)
-		position: absolute
-		top: 0px
-		left: 0px
-
-.widget__top30
-	display: block
-	text-align: center
-	padding: 0 10px
-	margin: 0px 20px 30px	
-	+OpenSans
-	font-size: 14px
-
-	p
-		padding: 5px 0 22px
-		border-bottom: 1px solid #cccccc	
-
-.widget__reservnow
-	display: block
-	padding: 30px 40px 24px
-	text-align: center
-	background: #f3f3f3
-	margin-bottom: 30px
-	
-	.reservnow
-		+OpenSansB
-		font-size: 16px
-		color: #000
-		padding-top: 4px
-		margin-bottom: 20px
-
-	p
-		+OpenSans
-		font-size: 14px		
-
-.widget__busy
-	display: block
-	background: #f3f3f3
-	text-align: center
-	padding: 18px 18px 16px
-	position: relative
-	margin-bottom: 30px
-	
-	.busy
-		+OpenSansB
-		font-size: 16px
-		color: #000
-		padding-top: 4px
-		margin-bottom: 20px
-
-	p
-		+OpenSans
-		font-size: 14px		
-
-	.nobusy
-		width: 100%
-		
-		.nobusy__name
-			margin-top: 10px
+		.order__how
 			+OpenSans
-			font-size: 16px
-			margin-bottom: 5px
+			font-size: 12px
+			color: #4d4d4d
+			margin-top: 10px
+			text-align: center
 
-		.nobusy__info
-			+OpenSansL
-			font-size: 14px
+		#calendar
+			width: 100%
+			position: absolute
+			top: 60px
+			left: 0px
+			z-index: 500
+			display: none
 
-	#next_place
-		z-index: 500
-		+s(nobusy_next)		
-		display: block
-		position: absolute
-		bottom: 65px
-		right: 30px
+			.calendar__inner
+				background: #f5f5f5
+				padding: 26px 0px 10px
+				position: relative
 
-	#prev_place
-		z-index: 500
-		+s(nobusy_prev)
-		display: block
-		position: absolute
-		bottom: 65px
-		left: 30px
+				.calendar__date
+					+OpenSansB
+					font-size: 14px
+					color: #000
+					text-align: center
 
-	.cycle-pager
-		text-align: center 			
+				.calendar__prev
+					position: absolute
+					display: block
+					+s(calendar_prev)
+					top: 31px
+					left: 40px
 
-		span				
-			font-size: 40px
-			width: 16px 
-			height: 16px
-			display: inline-block
-			color: #cccccc
-			cursor: pointer			
+				.calendar__next
+					position: absolute
+					display: block
+					+s(calendar_next)
+					top: 31px
+					right: 40px
 
-		.cycle-pager-active
-			color: #aaaaaa
+				.calendar__close
+					position: absolute
+					display: block
+					+s(widget_close)				
+					top: 10px
+					right: 10px
 
-.widget__about
-	display: block
-	+OpenSans
-	font-size: 14px
-	padding-bottom: 20px
-	padding-left: 65px	
+				.dayofweek
+					text-align: center
+					margin-top: 10px
 
-	div		
-		margin-bottom: 23px
+					li
+						display: inline-block
+						+OpenSansB
+						font-size: 13px
+						text-align: center					
+						color: #000
+						width: 34px
+						height: 30px						
+
+				.days
+					text-align: center
+					font-size: 14px
+
+					li
+						display: inline-block					
+						
+						a
+							display: block
+							width: 35px
+							height: 22px
+							padding-top: 8px
+							color: #000
+							text-align: center						
+
+						.is-active
+							background: #4d88bf
+							border-radius: 4px
+							color: #fff
+
+						a:hover
+							background: #d0e0ef
+							border-radius: 4px
+
+						.is-label
+							position: relative
+
+						.is-label:after
+							content: ' '
+							+s(calendar_label)
+							position: absolute
+							bottom: 3px
+							right: 3px
+
+						.is-othermonth
+							color: #71727d
+
+
+
+	.widget__map
+		margin-left: 3px
+
+	.widget__deposit
+		display: block		
+		margin: 0px 20px
+		+OpenSans	
+		height: 160px
 		position: relative
 
-	.check:before
-		position: absolute
-		content: ' '
-		+s(check)
-		top: -3px
-		left: -38px
+		.deposit
+			height: 25px
+			overflow: hidden
+			padding-top: 15px
+			+OpenSans
+			font-size: 13px
+			color: #40566a		
 
-	.worktoday:before
-		position: absolute
-		content: ' '
-		+s(worktoday)
-		top: -1px
-		left: -38px
+			span			
+				margin-left: 59px
+				position: relative
+				color: #40566a
+				font-size: 16px
+				border-bottom: 1px dashed #40566a
 
-	.point:before
-		position: absolute
-		content: ' '
-		+s(point)
-		top: -1px
-		left: -38px
+			span:before
+				content: ' '
+				+s(deposit)
+				position: absolute
+				top: -3px
+				left: -43px
 
-	.usphone:before
-		position: absolute
-		content: ' '
-		+s(usphone)
-		top: 0px
-		left: -38px
+			.hint
+				padding: 15px 15px 20px
+
+		.deposit:hover
+			cursor: pointer
+			height: 180px
+			background: #d4dde5
+			border-radius: 15px		
+			position: absolute
+			z-index: 500
+			
+		p
+			margin-top: 25px
+			padding-left: 68px
+			padding-bottom: 24px
+			border-bottom: 1px solid #cccccc	
+			+OpenSans
+			font-size: 14px
+			position: absolute
+			top: 40px		
+
+		p:before
+			content: ' '
+			+s(top30)
+			position: absolute
+			top: 0px
+			left: 0px
+
+	.widget__top30
+		display: block
+		text-align: center
+		padding: 0 10px
+		margin: 0px 20px 30px	
+		+OpenSans
+		font-size: 14px
+
+		p
+			padding: 5px 0 22px
+			border-bottom: 1px solid #cccccc	
+
+	.widget__reservnow
+		display: block
+		padding: 30px 40px 24px
+		text-align: center
+		background: #f3f3f3		
+		
+		.reservnow
+			+OpenSansB
+			font-size: 16px
+			color: #000
+			padding-top: 4px
+			margin-bottom: 20px
+
+		p
+			+OpenSans
+			font-size: 14px		
+
+	.widget__busy
+		display: block
+		background: #f3f3f3
+		text-align: center
+		padding: 18px 18px 16px
+		position: relative		
+		
+		.busy
+			+OpenSansB
+			font-size: 16px
+			color: #000
+			padding-top: 4px
+			margin-bottom: 20px
+
+		p
+			+OpenSans
+			font-size: 14px		
+
+		.nobusy
+			width: 100%
+			
+			.nobusy__name
+				margin-top: 10px
+				+OpenSans
+				font-size: 16px
+				margin-bottom: 5px
+
+			.nobusy__info
+				+OpenSansL
+				font-size: 14px
+
+		#next_place
+			z-index: 500
+			+s(nobusy_next)		
+			display: block
+			position: absolute
+			bottom: 65px
+			right: 30px
+
+		#prev_place
+			z-index: 500
+			+s(nobusy_prev)
+			display: block
+			position: absolute
+			bottom: 65px
+			left: 30px
+
+		.cycle-pager
+			text-align: center 			
+
+			span				
+				font-size: 40px
+				width: 16px 
+				height: 16px
+				display: inline-block
+				color: #cccccc
+				cursor: pointer			
+
+			.cycle-pager-active
+				color: #aaaaaa
+
+	.widget__about
+		display: block
+		+OpenSans
+		font-size: 14px
+		padding: 30px 0px 20px 65px		
+
+		div		
+			margin-bottom: 23px
+			position: relative
+
+		.check:before
+			position: absolute
+			content: ' '
+			+s(check)
+			top: -3px
+			left: -38px
+
+		.worktoday:before
+			position: absolute
+			content: ' '
+			+s(worktoday)
+			top: -1px
+			left: -38px
+
+		.point:before
+			position: absolute
+			content: ' '
+			+s(point)
+			top: -1px
+			left: -38px
+
+		.usphone:before
+			position: absolute
+			content: ' '
+			+s(usphone)
+			top: 0px
+			left: -38px
