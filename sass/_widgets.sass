@@ -1,9 +1,160 @@
-.widget__about
+.widget__deposit
+	display: block		
+	margin: 0px 20px
+	+OpenSans	
+	height: 160px
+	position: relative
+
+	.deposit
+		height: 25px
+		overflow: hidden
+		padding-top: 15px
+		+OpenSans
+		font-size: 13px
+		color: #40566a		
+
+		span			
+			margin-left: 59px
+			position: relative
+			color: #40566a
+			font-size: 16px
+			border-bottom: 1px dashed #40566a
+
+		span:before
+			content: ' '
+			+s(deposit)
+			position: absolute
+			top: -3px
+			left: -43px
+
+		.hint
+			padding: 15px 15px 20px
+
+	.deposit:hover
+		cursor: pointer
+		height: 180px
+		background: #d4dde5
+		border-radius: 15px		
+		position: absolute
+		z-index: 500
+
+	p
+		margin-top: 25px
+		padding-left: 68px
+		padding-bottom: 24px
+		border-bottom: 1px solid #cccccc	
+		+OpenSans
+		font-size: 14px
+		position: absolute
+		top: 40px		
+
+	p:before
+		content: ' '
+		+s(top30)
+		position: absolute
+		top: 0px
+		left: 0px
+
+.widget__top30
+	display: block
+	text-align: center
+	padding: 0 10px
+	margin: 0px 20px 30px	
 	+OpenSans
 	font-size: 14px
 
-	div
-		margin-left: 50px
+	p
+		padding: 5px 0 22px
+		border-bottom: 1px solid #cccccc	
+
+.widget__reservnow
+	display: block
+	padding: 30px 40px 24px
+	text-align: center
+	background: #f3f3f3
+	margin-bottom: 30px
+	
+	.reservnow
+		+OpenSansB
+		font-size: 16px
+		color: #000
+		padding-top: 4px
+		margin-bottom: 20px
+
+	p
+		+OpenSans
+		font-size: 14px		
+
+.widget__busy
+	display: block
+	background: #f3f3f3
+	text-align: center
+	padding: 18px 18px 16px
+	position: relative
+	margin-bottom: 30px
+	
+	.busy
+		+OpenSansB
+		font-size: 16px
+		color: #000
+		padding-top: 4px
+		margin-bottom: 20px
+
+	p
+		+OpenSans
+		font-size: 14px		
+
+	.nobusy
+		width: 100%
+		
+		.nobusy__name
+			margin-top: 10px
+			+OpenSans
+			font-size: 16px
+			margin-bottom: 5px
+
+		.nobusy__info
+			+OpenSansL
+			font-size: 14px
+
+	#next_place
+		z-index: 500
+		+s(nobusy_next)		
+		display: block
+		position: absolute
+		bottom: 65px
+		right: 30px
+
+	#prev_place
+		z-index: 500
+		+s(nobusy_prev)
+		display: block
+		position: absolute
+		bottom: 65px
+		left: 30px
+
+	.cycle-pager
+		text-align: center 			
+
+		span				
+			font-size: 40px
+			width: 16px 
+			height: 16px
+			display: inline-block
+			color: #cccccc
+			cursor: pointer			
+
+		.cycle-pager-active
+			color: #aaaaaa
+
+.widget__about
+	display: block
+	+OpenSans
+	font-size: 14px
+	padding-bottom: 20px
+	padding-left: 65px	
+
+	div		
 		margin-bottom: 23px
 		position: relative
 

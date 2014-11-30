@@ -130,7 +130,15 @@
 				<ul class="menu__type">
 					<li><a href="#" class="menu__winter is-active-w">Зимнее меню</a></li>
 					<li><a href="#" class="menu__base">Основное меню</a></li>
-					<li><a href="#" class="menu__other">Другое</a></li>
+					<li>
+						<a href="#" class="menu__other">Другое</a>
+						<ul class="other">
+							<li><a href="#">Узбекское меню</a></li>
+							<li><a href="#">Винная карта ресторан</a></li>
+							<li><a href="#">Айчичук</a></li>
+							<li><a href="#">Устричное меню</a></li>						
+						</ul>
+					</li>
 				</ul>
 
 				<div class="menu__article">
@@ -172,7 +180,7 @@
 						<span class="price">1 250руб</span>
 					</div>
 				</div>
-				<a href="#" class="menu__all">Сотреть меню полностью</a>
+				<a href="#" class="menu__all">Смотреть меню полностью</a>
 			</div>
 			<!--END menu-->
 
@@ -181,6 +189,9 @@
 				<div class="comments__header">
 					Честные отзывы
 					<a href="#">Почему честные?</a>
+					<p>
+						Отзывы оставляют только люди, действительно посетившие заведение
+					</p>
 				</div>
 				
 				<!-- BEGIN cycle-slideshow-->
@@ -222,7 +233,7 @@
 								</div>
 							</div>
 							<div class="guest__comment">
-								У меня было плохое настроение. Я сломала ноготь и Мир ушел из под ного.
+								У меня было плохое настроение. Я сломала ноготь и Мир ушел из под ног.
 							</div>
 						</div>
 						<div class="guest">
@@ -264,37 +275,123 @@
 
 		<!-- BEGIN widget -->
 		<div class="sidebar">
-			<div class="sidebar__inner">
-				<div class="order">
-					<div class="order__datetime">
-						<a href="#" class="date">15 окт</a>					
-						<a href="#" class="time">20:30</a>
-						<a href="#" class="count">2</a>				
+			<div class="order">
+				<div class="order__datetime">
+					<a href="#" class="date">15 окт</a>					
+					<a href="#" class="time">20:30</a>
+					<a href="#" class="count">2</a>				
+				</div>
+				<a href="#" class="order__button">Заказать столик</a>
+				<div class="order__how">бесплатно за 2 минуты!</div>
+			</div>
+
+			<!-- BEGIN widget__deposit-->
+			<div class="widget__deposit">
+				<div class="deposit">
+					<span>Депозит от 1500 руб.</span>
+					<div class="hint">
+						Для компании от 8 человек, в ресторане Китайская грамота действует депозитная система после 19:30 1500 руб. с человека.
+						<br /><br />
+						Депозит можно внести по факту прихода в заведение.					
 					</div>
-					<a href="#" class="order__button">Заказать столик</a>
-					<div class="order__how">бесплатно за 2 минуты!</div>
 				</div>
 
-				<!-- BEGIN widget__about-->
-				<div class="widget__about">
-					<div class="check">
-						Средний чек 3500 руб.
-					</div>
-					<div class="worktoday">
-						Сегодня работает до 6 утра
-					</div>
-					<div class="point">
-						Смоленская пл., д. 3<br />м. Смоленская
-					</div>
-					<div class="usphone">
-						8 (495) 255-11-66
-					</div>					
-				</div>
-				<!-- END widget__about-->
+				<p>
+					Ресторан входит в ТОП 30 ресторанов Gettable
+				</p>				
 			</div>
-			<img src="img/map.jpg" alt="">			
+			<!-- END widget__deposit-->
+
+			<!-- BEGIN widget__top30-->
+			<div class="widget__top30">
+				<img src="img/top30.png">				
+				<p>
+					Ура! Ресторан входит в ТОП 30 ресторанов Gettable
+				</p>				
+			</div>
+			<!-- END widget__top30-->
+
+			<!-- BEGIN widget__bronow-->
+			<div class="widget__reservnow">
+				<img src="img/reservnow.png">
+				<div class="reservnow">
+					Лучше забронировать сейчас
+				</div>
+				<p>
+					По нашей статистике в ресторане Китайская грамота скоро закончатся свободные столики на вечер
+				</p>				
+			</div>
+			<!-- END widget__busy-->
+
+			<!-- BEGIN widget__busy-->
+			<div class="widget__busy">
+				<div class="busy">
+					На сегодня мест нет
+				</div>
+				<p>
+					5 похожих заведений,<br />где еще остались места на сегодня:
+				</p>
+				<img src="img/widget_busy.jpg">
+
+				<!-- BEGIN cycle-slideshow-->
+				<div class="cycle-slideshow" data-cycle-timeout="4000" data-cycle-slides=".nobusy" data-cycle-next="#next_place" data-cycle-prev="#prev_place">
+					<div class="nobusy">
+						<div class="nobusy__name">
+							Mr. Lee								
+						</div>
+						<div class="nobusy__info">
+							Средний счет: 2500 руб.<br />
+							м. Смоленская								
+						</div>							
+					</div>
+
+					<div class="nobusy">
+						<div class="nobusy__name">
+							Mr. Lee 2
+						</div>
+						<div class="nobusy__info">
+							Средний счет: 2000 руб.<br />
+							м. Смоленская								
+						</div>							
+					</div>
+
+					<div class="nobusy">
+						<div class="nobusy__name">
+							Mr. Lee	3
+						</div>
+						<div class="nobusy__info">
+							Средний счет: 1900 руб.<br />
+							м. Смоленская								
+						</div>							
+					</div>
+					<div class="cycle-pager"></div>					
+				</div>
+				<a href="#" id="next_place"></a>
+				<a href="#" id="prev_place"></a>
+				<!-- END cycle-slideshow-->				
+			</div>
+			<!-- END widget__busy-->
+
+			<!-- BEGIN widget__about-->
+			<div class="widget__about">
+				<div class="check">
+					Средний чек 3500 руб.
+				</div>
+				<div class="worktoday">
+					Сегодня работает до 6 утра
+				</div>
+				<div class="point">
+					Смоленская пл., д. 3<br />м. Смоленская
+				</div>
+				<div class="usphone">
+					8 (495) 255-11-66
+				</div>					
+			</div>
+			<!-- END widget__about-->
+
+			<img src="img/map.jpg" class="map" alt="">			
 		</div>
-		<!-- END widget-->
+		<!-- END sidebar-->
 	</div>
 	<!-- END wrapper -->
 
