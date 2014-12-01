@@ -455,19 +455,44 @@
 				color: #212121
 				line-height: 40px
 
-.searchrest	
+.searchrest
+	width: 255px
+	padding: 20px 0px 20px 20px
+	background: #f1f1f2
+	border-radius: 10px
 	
-	.searchrest__form
+	.searchrest__input
 		position: relative
 	
 		.searchrest__text		
-			width: 230px
+			width: 175px
 			height: 33px
 			border: 1px solid #e1e1e1
 			border-radius: 5px
+			padding-left: 40px
+			padding-right: 15px
+			font-size: 14px
+			+OpenSans
+			color: #000
 
 		.searchrest__button
 			+s(search_name)			
 			position: absolute
 			top: 0px
 			left: 0px
+
+	.searchrest__select
+		border-top: 1px solid #e2e1e3
+		margin-top: 20px
+		padding-top: 16px
+
+		.popular
+			padding-top: 10px
+			background: #636363
+			color: #fff
+			display: block
+			height: 27px
+			width: 104px
+			text-align: center
+			border-radius: 5px 0 0 5px
+			border-top: 3px solid #414141

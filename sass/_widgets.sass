@@ -381,15 +381,17 @@
 		display: block
 		background: #f3f3f3
 		text-align: center
-		padding: 18px 18px 16px
-		position: relative		
-		
+		padding-top: 18px
+		padding-right: 18px
+		padding-left: 18px		
+		position: relative
+
 		.busy
 			+OpenSansB
 			font-size: 16px
 			color: #000
 			padding-top: 4px
-			margin-bottom: 20px
+			margin-bottom: 20px			
 
 		p
 			+OpenSans
@@ -398,8 +400,12 @@
 		img
 			margin-top: 25px
 
+		.cycle-slideshow
+			height: 120px
+
+		
 		.nobusy
-			width: 100%
+			width: 100%			
 			
 			.nobusy__name
 				margin-top: 10px
@@ -427,19 +433,7 @@
 			bottom: 65px
 			left: 30px
 
-		.cycle-pager
-			text-align: center 			
-
-			span				
-				font-size: 40px
-				width: 16px 
-				height: 16px
-				display: inline-block
-				color: #cccccc
-				cursor: pointer			
-
-			.cycle-pager-active
-				color: #aaaaaa
+		
 
 	// Виджет "Общие сведения" //
 	.widget__about
