@@ -429,6 +429,7 @@
 	width: 930px
 	margin: 0 auto	
 	margin-top: 40px
+	margin-bottom: 40px
 
 	.employee
 	
@@ -457,14 +458,16 @@
 
 .searchrest
 	width: 255px
-	padding: 20px 0px 20px 20px
+	padding: 20px 0px 5px 20px
 	background: #f1f1f2
 	border-radius: 10px
+	float: left
 	
 	.searchrest__input
 		position: relative
 	
-		.searchrest__text		
+		.searchrest__text
+			+geinsp
 			width: 175px
 			height: 33px
 			border: 1px solid #e1e1e1
@@ -484,15 +487,148 @@
 	.searchrest__select
 		border-top: 1px solid #e2e1e3
 		margin-top: 20px
-		padding-top: 16px
+		padding-top: 16px		
 
-		.popular
-			padding-top: 10px
-			background: #636363
+		.searchrest__button
+			font-size: 0px
+			margin-bottom: 20px
+
+			a
+				display: inline-block
+				font-size: 13px
+
+			.popular
+				padding-top: 10px
+				background: #636363
+				color: #fff			
+				height: 27px
+				width: 104px
+				text-align: center
+				border-radius: 5px 0 0 5px
+				border-top: 3px solid #414141			
+
+			.new			
+				background: #fdfdfd
+				padding-top: 12px			
+				color: #000			
+				height: 24px
+				width: 83px
+				text-align: center
+				border-radius: 0 5px 5px 0
+				border-bottom: 3px solid #b1b0b2
+
+		.searchrest__option
+			line-height: 35px
+			color: #7b7b7b
+			font-size: 15px
+			+geinsp
+
+			input
+				width: 16px
+				height: 16px
+				background: #123456
+				position: relative
+				top: 3px
+				margin-right: 8px
+
+			input:checked + label
+				color: #000
+
+		.searchrest__nav
+			margin-top: 20px
+			+OpenSansL
+			font-size: 18px
+
+			li
+				border-top: 1px solid #e1e2e1
+
+				a
+					display: block
+					line-height: 60px
+					height: 60px
+					color: #595959
+					position: relative
+
+					span:after
+						content: ' '		
+						position: absolute
+						+s(arrow_searchrest)
+						top: 25px
+						right: 20px
+
+.restaurants
+	float: right
+	width: 670px	
+
+	.restaurant
+		width: 313px
+		border: 1px solid #d5d3d7
+		background: #fff
+		+geinsp
+		display: inline-block
+		vertical-align: top
+		margin-left: 18px
+		position: relative
+
+		.restaurant__info		
+			padding: 14px 24px 0 24px
+
+			.restaurant__header
+				font-size: 23px
+				color: #000
+				margin-bottom: 10px
+
+				span
+					float: right
+					font-size: 16px
+					color: #727272
+					margin-top: 7px
+					position: relative
+
+				span:before
+					content: ' '
+					+s(rest_like)
+					position: absolute
+					left: -24px
+
+			img
+				float: left
+				margin-right: 20px
+
+			p
+				font-size: 15px
+				color: #858585
+				overflow: hidden
+				height: 115px
+
+			.restaurant_point
+				clear: both
+				margin: 10px 0px
+				padding-left: 20px
+				padding-top: 10px
+				font-size: 14px
+				color: #858585
+				position: relative
+				border-top: 1px solid #e7e7e7
+
+			.restaurant_point:before
+				content: ' '
+				+s(point_address)
+				position: absolute
+				top: 11px
+				left: 0px
+
+		.ribbon-red
+			+s(ribbon_red)
+			+geinsp
+			font-weight: bold
 			color: #fff
-			display: block
-			height: 27px
-			width: 104px
+			text-transform: uppercase
+			font-size: 18px
+			padding-top: 5px
 			text-align: center
-			border-radius: 5px 0 0 5px
-			border-top: 3px solid #414141
+			position: absolute
+			top: 8px
+			right: -6px
+
+
