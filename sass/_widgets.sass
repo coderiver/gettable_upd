@@ -6,11 +6,24 @@
 	border-radius: 4px
 	background: #fff
 
+	.dark
+		position: absolute
+		top: 0px
+		left: 0px
+		height: 100%
+		width: 100%
+		background: #000
+		z-index: 400
+		display: none
+		opacity: 0.6
+
+	// Виджет "Заказ столика" //
 	.widget__order
 		display: block				
 
 		.order__datetime
 			padding: 17px 17px 0px 17px
+			position: relative
 
 			a
 				display: inline-block
@@ -56,6 +69,35 @@
 				position: absolute
 				top: 6px
 				right: 6px
+
+			.count:hover + #counter_order
+				display: block
+
+			#counter_order
+				display: none
+				position: absolute
+				top: 0px
+				right: -30px
+
+				a
+					display: block
+					border: none
+					padding: 0px
+
+				.counter__up		
+					+s(counter_up)		
+
+				.counter__up:hover
+					+s(counter_up_hover)
+
+				.counter__down
+					+s(counter_down)		
+
+				.counter__down:hover
+					+s(counter_down_hover)
+
+			#counter_order:hover
+				display: block
 
 		.order__button
 			display: block
@@ -112,7 +154,7 @@
 					top: 31px
 					right: 40px
 
-				.calendar__close
+				.widget__close
 					position: absolute
 					display: block
 					+s(widget_close)				
@@ -168,12 +210,86 @@
 
 						.is-othermonth
 							color: #71727d
+		#clock
+			width: 100%
+			position: absolute
+			top: 60px
+			left: 0px
+			z-index: 500
+			display: none			
+
+			.clock__inner
+				background: #f5f5f5
+				padding: 26px 0px 14px
+				position: relative
+
+				.clock__order
+					+OpenSans
+					font-size: 14px
+					color: #000
+					text-align: center
+					margin-bottom: 10px
+
+					.widget__close
+						position: absolute
+						display: block
+						+s(widget_close)				
+						top: 10px
+						right: 10px
+
+				.selecttime
+					text-align: center
+
+					li
+						display: inline-block
+						margin: 4px
+						position: relative
+						
+						a
+							display: block
+							width: 65px
+							height: 26px
+							padding-top: 6px
+							+OpenSans
+							font-size: 14px
+							color: #494949
+							background: #dcdcdc
+							border-radius: 4px
+
+						a:hover
+							background: #c4c4c4
+							border-radius: 4px
+
+						.is-active
+							background: #6e6e6e
+							color: #fff
+
+						.clock__prev
+							position: relative
+						
+						.clock__prev:before
+							content: ' '
+							position: absolute
+							+s(clock_prev)
+							top: 8px
+							left: 27px
+
+						.clock__next
+							position: relative
+						
+						.clock__next:before
+							content: ' '
+							position: absolute
+							+s(clock_next)
+							top: 8px
+							right: 27px
 
 
-
+	// Виджет "Карта" //
 	.widget__map
 		margin-left: 3px
 
+	// Виджет "Депозит" //
 	.widget__deposit
 		display: block		
 		margin: 0px 20px
@@ -260,6 +376,7 @@
 			+OpenSans
 			font-size: 14px		
 
+	// Виджет "Нет свободных мест" //
 	.widget__busy
 		display: block
 		background: #f3f3f3
@@ -276,7 +393,10 @@
 
 		p
 			+OpenSans
-			font-size: 14px		
+			font-size: 14px
+
+		img
+			margin-top: 25px
 
 		.nobusy
 			width: 100%
@@ -321,6 +441,7 @@
 			.cycle-pager-active
 				color: #aaaaaa
 
+	// Виджет "Общие сведения" //
 	.widget__about
 		display: block
 		+OpenSans

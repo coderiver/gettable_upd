@@ -275,21 +275,31 @@
 
 		<!-- BEGIN widgets -->
 		<div class="widgets">
+			<div class="dark"></div>
 			<div class="widget__order">
 				<div class="order__datetime">
-					<a href="#" class="date" onclick="getElementById('calendar').style.display='block'">15 окт</a>					
-					<a href="#" class="time">20:30</a>
-					<a href="#" class="count">2</a>				
+					<a href="#" class="date" onclick="getElementById('calendar').style.display='block'">15 окт</a>		
+					<a href="#" class="time" onclick="getElementById('clock').style.display='block'">20:30</a>			
+					<a href="#" class="count">2</a>
+					
+					<!-- BEGIN counter -->
+					<div id="counter_order">
+						<a href="#" class="counter__up"></a>
+						<a href="#" class="counter__down"></a>
+					</div>
+					<!-- END counter-->
 				</div>
+
 				<a href="#" class="order__button">Заказать столик</a>
 				<div class="order__how">бесплатно за 2 минуты!</div>
 
+				<!-- BEGIN calendar -->
 				<div id="calendar">
 					<div class="calendar__inner">
 						<div class="calendar__date">						
 							<span class="month">Ноябрь</span>
 							<span class="year">2014</span>
-							<a href="#" class="calendar__close" onclick="getElementById('calendar').style.display='none'"></a>
+							<a href="#" class="widget__close" onclick="getElementById('calendar').style.display='none'"></a>
 							<a href="#" class="calendar__prev"></a>
 							<a href="#" class="calendar__next"></a>
 						</div>
@@ -319,6 +329,43 @@
 						</div>							
 					</div>
 				</div>
+				<!-- END calendar -->
+
+				<!-- BEGIN clock-->
+				<div id="clock">
+					<div class="clock__inner">
+						<div class="clock__order">
+							Время бронирования:
+							<a href="#" class="widget__close" onclick="getElementById('clock').style.display='none'"></a>
+						</div>
+						<ul class="selecttime">
+							<li><a href="#" class="clock__prev">&nbsp;</a></li>
+							<li><a href="#">15:30</a></li>
+							<li><a href="#">16:00</a></li>
+						</ul>
+						<ul class="selecttime">
+							<li><a href="#">16:30</a></li>
+							<li><a href="#">17:00</a></li>
+							<li><a href="#">17:30</a></li>
+						</ul>
+						<ul class="selecttime">
+							<li><a href="#">18:00</a></li>
+							<li><a href="#" class="is-active">18:30</a></li>
+							<li><a href="#">19:00</a></li>
+						</ul>
+						<ul class="selecttime">
+							<li><a href="#">19:30</a></li>
+							<li><a href="#">20:00</a></li>
+							<li><a href="#">20:30</a></li>
+						</ul>
+						<ul class="selecttime">
+							<li><a href="#">21:00</a></li>
+							<li><a href="#">21:30</a></li>
+							<li><a href="#" class="clock__next">&nbsp;</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END clock-->				
 			</div>
 
 			<!-- BEGIN widget__deposit-->
