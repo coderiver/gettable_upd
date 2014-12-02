@@ -106,6 +106,39 @@ a
 	.counter__down:hover
 		+s(counter_down_hover)
 
+.searchrest__input
+	position: relative
+	
+	.searchrest__text
+		+geinsp
+		width: 175px
+		height: 33px
+		border: 1px solid #e1e1e1
+		border-radius: 5px
+		padding-left: 40px
+		padding-right: 15px
+		font-size: 14px
+		+OpenSans
+		color: #000
+		background: #fff
+
+	.searchrest__button
+		+s(search_name)			
+		position: absolute
+		top: 0px
+		left: 0px
+
+input
+	width: 16px
+	height: 16px
+	background: #123456
+	position: relative
+	top: 3px
+	margin-right: 8px
+
+input:checked + label
+	color: #000
+
 // PAGER
 .cycle-pager
 	clear: both
@@ -114,8 +147,7 @@ a
 	span				
 		font-size: 40px
 		width: 16px 
-		height: 16px
-		display: inline-block
+		height: 16px		
 		color: #cccccc
 		cursor: pointer			
 
@@ -123,12 +155,12 @@ a
 		color: #aaaaaa
 
 // HEADER
-.header	
+.header__gettable
 	background: #000
 	+OpenSansL
 	color: #fff	
 
-#header__main		
+#header__main
 	clear: both
 	background: url(../img/header_bg.jpg) no-repeat 50% 50%	
 	overflow: hidden		
@@ -267,7 +299,7 @@ a
 		top: 5px
 		right: -30px
 
-.header__search	
+.header
 
 	.header__inner		
 		width: 1000px
@@ -286,20 +318,84 @@ a
 			left: 220px
 			top: 32px
 			+OpenSans
-			font-size: 14px
-
-			span
-				color: #2464c1				
+			font-size: 14px			
 
 			a
+				margin-right: 20px
+				color: #2464c1
+				position: relative
+				z-index: 300
+
+			a:hover
+				text-decoration: underline			
+
+			a:hover + ul
+				display: block
+
+			.is-arrow-down
 				position: relative
 			
-			a:after
+			.is-arrow-down:after
 				content: ' '
 				+s(arrow_yandex)
 				position: absolute
-				top: 8px
+				top: 9px
 				right: -20px
+
+			.is-arrow-right
+				position: relative
+			
+			.is-arrow-right:after
+				content: ' '
+				+s(is-arrow-right)
+				position: absolute
+				top: 6px
+				right: -15px
+
+			.popup_rest
+				position: absolute
+				top: -10px
+				left: 0px
+				background: #fff
+				padding-top: 60px
+				z-index: 200
+				border-radius: 6px
+				text-align: right
+				width: 205px
+				padding-bottom: 20px
+				display: none
+
+				&:hover
+					display: block
+
+				a
+					margin-right: 0px
+					padding-right: 20px
+					line-height: 30px
+					+OpenSans
+					font-size: 14px
+					color: #000
+					text-decoration: none
+					display: block
+
+				a:hover
+					background: #ececec
+
+				.is-absent
+					color: #c6c6c6
+
+					&:hover
+						background: transparent
+
+				.is-active-city
+					position: relative
+
+				.is-active-city:before
+					content: ' '
+					+s(is-active-city)
+					position: absolute
+					left: -25px
+					top: 2px
 
 		.header__loginfree
 			position: absolute
@@ -315,7 +411,83 @@ a
 			position: absolute
 			top: 2px
 			left: 0px			
-			+s(login)			
+			+s(login)
+
+		.header__loginfree:hover
+			text-decoration: underline
+
+.searchrest
+	width: 255px
+	padding: 20px 0px 5px 20px
+	background: #f1f1f2
+	border-radius: 10px
+	float: left
+	
+	.searchrest__select
+		border-top: 1px solid #e2e1e3
+		margin-top: 20px
+		padding-top: 16px		
+
+		.searchrest__button
+			font-size: 0px
+			margin-bottom: 20px
+
+			a
+				display: inline-block
+				font-size: 13px
+
+			.popular
+				padding-top: 10px
+				background: #636363
+				color: #fff			
+				height: 27px
+				width: 104px
+				text-align: center
+				border-radius: 5px 0 0 5px
+				border-top: 3px solid #414141			
+
+			.new			
+				background: #fdfdfd
+				padding-top: 12px			
+				color: #000			
+				height: 24px
+				width: 83px
+				text-align: center
+				border-radius: 0 5px 5px 0
+				border-bottom: 3px solid #b1b0b2
+
+		.searchrest__option
+			line-height: 35px
+			color: #7b7b7b
+			font-size: 15px
+			padding-bottom: 8px
+			+geinsp			
+
+		.searchrest__nav
+			margin-top: 12px
+			+OpenSansL
+			font-size: 18px
+
+			li
+				border-top: 1px solid #e1e2e1
+
+				a
+					display: block
+					line-height: 60px
+					height: 60px
+					color: #595959
+					position: relative
+
+					span:after
+						content: ' '		
+						position: absolute
+						+s(arrow_searchrest)
+						top: 25px
+						right: 20px
+
+				a:hover
+					color: #000
+					+OpenSans
 
 // SOCIAL
 .social	

@@ -1,0 +1,593 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gettable</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+
+	<script src="js/lib/jquery.js"></script>
+	<script src="js/lib/cycle.js"></script>
+	<script src="js/lib/cycle.carousel.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- BEGIN  header__gettable-->
+	<div class="header__gettable">
+		<!-- BEGIN header__main -->
+		<div id="header__main">
+			<div class="header__topline">
+				<a href="#" class="header__logo">Gettable</a>				
+				<div class="header__phone">
+					8 (495) 255-09-08
+				</div>				
+			</div>
+			<div class="header__bottom">
+				<div class="header__name">
+					Китайская грамота
+				</div>							
+				<div class="header__like">
+					604
+				</div>				
+				<a href="#" class="header__photo" onclick="ShowHideSlider()">23 фото</a>	
+			</div>		
+		</div>
+		<!-- END header__main-->		
+		<!-- BEGIN header__slider-->
+		<div id="header__slider">
+			<div class="slider">
+				<a href="#" class="slider__close" onclick="ShowHideSlider()"></a>
+
+				<div class="cycle-slideshow" data-cycle-timeout="4000" data-cycle-next="#next" data-cycle-prev="#prev">
+					<img src="img/slide1.jpg" alt="Слайд 1" />
+					<img src="img/slide1.jpg" alt="Слайд 2" />
+					<img src="img/slide1.jpg" alt="Слайд 3" />
+					<img src="img/slide1.jpg" alt="Слайд 4" />
+				</div>
+					
+				<div class="slider__option">
+					<a href="#" id="next"></a>
+					<a href="#" id="prev"></a>
+				</div>
+			</div>
+			<div class="header__name">
+				Китайская грамота
+			</div>						
+			<div class="header__like">
+				604				
+			</div>			
+			<a href="#" class="header__turnphoto" onclick="ShowHideSlider()">Свернуть фото</a>
+		</div>
+		<!-- END header__slider-->
+	</div>
+	<!-- END  header__gettable-->
+
+	<!-- BEGIN wrapper-->
+	<div class="wrapper">
+		<!-- BEGIN content-->
+		<div class="content">
+			<!-- BEGIN content__block-->
+			<div class="content__block">
+				<div class="content__quote">
+					<img src="img/men.png" alt="">					
+					<span>Петя, GETtable guru:</span>
+					<p>
+						Когда читаешь меню, ощущение, что на кухне собрались любители БДСМ — рваная говядина, битые огурцы.
+					</p>
+					<a href="#">Развернуть</a>
+				</div>
+				<div class="content__advice">
+					<span>Советуем:</span>
+					<p>
+						Пробовать все подряд, даже то, что страшно называется.
+					</p>
+				</div>
+			</div>
+			<!-- END content__block-->
+
+			<!-- BEGIN content__block-->
+			<div class="content__block">
+				<div class="content__NewYear">
+					<img src="img/tree.png" alt="">					
+					<span>Новогодняя ночь 2015</span>					
+				</div>
+			
+				<div class="content__propose">
+					<p>
+						Депозит 2500 руб. на человека.<br />
+						В депозит входит горячее, закуска, десерт, некрепкий алкоголь.
+						Необходимо привезти заранее не менее чем за 1 день.
+					</p>
+					<p>							
+						Имеются столки: на 4 человека у сцены (20 000 руб стол), на 6 человек 
+						в центре зала (55 000 руб. стол), в VIP зале (50 000 руб. стол).
+					</p>
+					<p>
+						Сбор гостей к 22.00. Михаил Гребенщиков выступает до 5 часов утра, пока не выгоним.
+					</p>
+				</div>
+
+				<div class="content__detail">
+					<div class="detail">
+						Обговорим детали по телефону:	
+					</div>
+					<div class="count">
+						2
+					</div>					
+					<div class="counter">
+						<a href="#" class="counter__up"></a>
+						<a href="#" class="counter__down"></a>
+					</div>
+					<a href="#" class="order">Заказать столик на НГ</a>
+				</div>		
+			</div>
+			<!-- END content__block-->
+
+			<!--BEGIN menu-->
+			<div class="menu">
+				<div class="menu__header">
+					Меню ресторана					
+				</div>			
+				<ul class="menu__type">
+					<li><a href="#" class="menu__winter is-active-w">Зимнее меню</a></li>
+					<li><a href="#" class="menu__base">Основное меню</a></li>
+					<li>
+						<a href="#" class="menu__other">Другое</a>
+						<ul class="other">
+							<li><a href="#">Узбекское меню</a></li>
+							<li><a href="#">Винная карта ресторан</a></li>
+							<li><a href="#">Айчичук</a></li>
+							<li><a href="#">Устричное меню</a></li>						
+						</ul>
+					</li>
+				</ul>
+
+				<div class="menu__article">
+					<div class="menu__title">
+						Салаты						
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Мурманская треска с ньокками из тыквы и чипсами из хамона </span>
+						<span class="weight">150 г</span>
+						<span class="price">1 430руб</span>
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Котлетки из краба со спаржей в пикантном соусе </span>
+						<span class="weight">100 г</span>
+						<span class="price">2 880руб</span>
+					</div>
+
+					<div class="menu__title">
+						Горячее
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Корень козлобородника с черным тосканским трюфелем </span>
+						<span class="weight">130 г</span>
+						<span class="price">1 770руб</span>
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Запеченный костный мозг с салатом из петрушки, каперсов и белого лука </span>
+						<span class="weight">100 г</span>
+						<span class="price">2 880руб</span>
+					</div>									
+					<div class="menu__pos">
+						<span class="dish">Полдюжины французских виноградных улиток </span>
+						<span class="weight">50/70 г</span>
+						<span class="price">1 410руб</span>
+					</div>
+					<div class="menu__pos">
+						<span class="dish">Обжаренная фуа-гра с виноградом, листьями молодой свеклы<br />козлобородника с пеной из фуа-гра и черным тосканским трюфелем </span>
+						<span class="weight">210 г</span>
+						<span class="price">1 250руб</span>
+					</div>
+				</div>
+				<a href="#" class="menu__all">Смотреть меню полностью</a>
+			</div>
+			<!--END menu-->
+
+			<!--BEGIN comments-->
+			<div class="comments">
+				<div class="comments__header">
+					Честные отзывы
+					<a href="#">Почему честные?</a>
+					<p>
+						Отзывы оставляют только люди, действительно посетившие заведение
+					</p>
+				</div>
+				
+				<!-- BEGIN cycle-slideshow-->
+				<div class="cycle-slideshow" data-cycle-timeout="4000" data-cycle-slides=".comments__block" data-cycle-next="#next_comm" data-cycle-prev="#prev_comm">
+					<div class="comments__block">
+						<div class="guest">
+							<img src="img/guest1.png" alt="">
+							<div class="guest__metadata">							
+								<span class="name is-plus">Ольга красоткина</span>							
+								<div class="visit">
+									1 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">
+								Нам понравилось всё: шикарный вид из окна, красивый интерьер,вкусные десерты. Если появится возможность, еще придем!							
+							</div>
+						</div>
+						<div class="guest">
+							<div class="guest__metadata">
+								<img src="img/guest2.png" alt="">
+								<span class="name is-minus">Ольга красоткина</span>
+								<div class="visit">
+									1 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">
+								Добрый день! 12 июня 2013 я отмечал в вашем ресторане день рождения! Не смотря на полную загрузку ресторана, персонал работал быстро и внимательно, всё было отлично и супер! Очень понравилось поздравление от ресторана! Жалко что не было именных бейджей на сотрудниках - не могу перечислить их имена (( и сказать всем спасибо! Успехов и процветания вашей сети ресторанов! Мы уже третий раз в этом ресторане и обязательно вернёмся ещё! Удачи!
+							</div>
+						</div>					
+					</div>
+
+					<div class="comments__block">
+						<div class="guest">
+							<img src="img/guest1.png" alt="">
+							<div class="guest__metadata">							
+								<span class="name is-plus">Ольга красоткина</span>							
+								<div class="visit">
+									3 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">
+								У меня было плохое настроение. Я сломала ноготь и Мир ушел из под ног.
+							</div>
+						</div>
+						<div class="guest">
+							<div class="guest__metadata">
+								<img src="img/guest2.png" alt="">
+								<span class="name is-minus">Ольга красоткина</span>
+								<div class="visit">
+									4 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">								
+								Моя подруга постоянно ела с моей тарелки и я ушла голодная.
+							</div>
+						</div>
+						<div class="guest">
+							<div class="guest__metadata">
+								<img src="img/guest1.png" alt="">
+								<span class="name is-minus">Ольга красоткина</span>
+								<div class="visit">
+									7 октября 2014								
+								</div>
+							</div>
+							<div class="guest__comment">
+								Добрый день! У меня было плохое настроение. Я сломала ноготь и Мир ушел из под ног.
+							</div>
+						</div>					
+					</div>
+
+					<div class="cycle-pager"></div>
+				</div>
+				<!-- END cycle-slideshow-->
+
+				<a href="#" id="next_comm"></a>
+				<a href="#" id="prev_comm"></a>
+			</div>
+			<!--END comments-->
+		</div>
+		<!-- END content -->
+
+		<!-- BEGIN widgets -->
+		<div class="widgets">
+			<div class="dark"></div>
+			<div class="widget__order">
+				<div class="order__datetime">
+					<a href="#" class="date" onclick="getElementById('calendar').style.display='block'">15 окт</a>		
+					<a href="#" class="time" onclick="getElementById('clock').style.display='block'">20:30</a>			
+					<a href="#" class="count">2</a>
+					
+					<!-- BEGIN counter -->
+					<div id="counter_order">
+						<a href="#" class="counter__up"></a>
+						<a href="#" class="counter__down"></a>
+					</div>
+					<!-- END counter-->
+				</div>
+
+				<a href="#" class="order__button">Заказать столик</a>
+				<div class="order__how">бесплатно за 2 минуты!</div>
+
+				<!-- BEGIN calendar -->
+				<div id="calendar">
+					<div class="calendar__inner">
+						<div class="calendar__date">						
+							<span class="month">Ноябрь</span>
+							<span class="year">2014</span>
+							<a href="#" class="widget__close" onclick="getElementById('calendar').style.display='none'"></a>
+							<a href="#" class="calendar__prev"></a>
+							<a href="#" class="calendar__next"></a>
+						</div>
+						<ul class="dayofweek">
+							<li>Пн</li><li>Вт</li><li>Ср</li><li>Чт</li>
+							<li>Пт</li><li>Сб</li><li>Вс</li>						
+						</ul>							
+						<div class="days">
+							<ul>
+								<li><a href="#" class="is-othermonth">26</a></li><li><a href="#" class="is-othermonth">27</a></li><li><a href="#" class="is-othermonth">28</a></li><li><a href="#" class="is-othermonth">29</a></li><li><a href="#" class="is-othermonth">30</a></li><li><a href="#" class="is-othermonth">31</a></li><li><a href="#">1</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#" class="is-active">6</a></li><li><a href="#">7</a></li><li><a href="#">8</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">9</a></li><li><a href="#">10</a></li><li><a href="#">11</a></li><li><a href="#">12</a></li><li><a href="#">13</a></li><li><a href="#">14</a></li><li><a href="#">15</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">16</a></li><li><a href="#">17</a></li><li><a href="#">18</a></li><li><a href="#">19</a></li><li><a href="#">20</a></li><li><a href="#">21</a></li><li><a href="#">22</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">23</a></li><li><a href="#">24</a></li><li><a href="#" class="is-label">25</a></li><li><a href="#">26</a></li><li><a href="#">27</a></li><li><a href="#">28</a></li><li><a href="#">29</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">30</a></li><li><a href="#" class="is-othermonth">1</a></li><li><a href="#" class="is-othermonth">2</a></li><li><a href="#" class="is-othermonth">3</a></li><li><a href="#" class="is-othermonth">4</a></li><li><a href="#" class="is-othermonth">5</a></li><li><a href="#" class="is-othermonth">6</a></li>
+							</ul>
+						</div>							
+					</div>
+				</div>
+				<!-- END calendar -->
+
+				<!-- BEGIN clock-->
+				<div id="clock">
+					<div class="clock__inner">
+						<div class="clock__order">
+							Время бронирования:
+							<a href="#" class="widget__close" onclick="getElementById('clock').style.display='none'"></a>
+						</div>
+						<ul class="selecttime">
+							<li><a href="#" class="clock__prev">&nbsp;</a></li>
+							<li><a href="#">15:30</a></li>
+							<li><a href="#">16:00</a></li>
+						</ul>
+						<ul class="selecttime">
+							<li><a href="#">16:30</a></li>
+							<li><a href="#">17:00</a></li>
+							<li><a href="#">17:30</a></li>
+						</ul>
+						<ul class="selecttime">
+							<li><a href="#">18:00</a></li>
+							<li><a href="#" class="is-active">18:30</a></li>
+							<li><a href="#">19:00</a></li>
+						</ul>
+						<ul class="selecttime">
+							<li><a href="#">19:30</a></li>
+							<li><a href="#">20:00</a></li>
+							<li><a href="#">20:30</a></li>
+						</ul>
+						<ul class="selecttime">
+							<li><a href="#">21:00</a></li>
+							<li><a href="#">21:30</a></li>
+							<li><a href="#" class="clock__next">&nbsp;</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END clock-->				
+			</div>
+
+			<!-- BEGIN widget__deposit-->
+			<div class="widget__deposit">
+				<div class="deposit">
+					<span>Депозит от 1500 руб.</span>
+					<div class="hint">
+						Для компании от 8 человек, в ресторане Китайская грамота действует депозитная система после 19:30 1500 руб. с человека.
+						<br /><br />
+						Депозит можно внести по факту прихода в заведение.					
+					</div>
+				</div>
+
+				<p>
+					Ресторан входит в ТОП 30 ресторанов Gettable
+				</p>				
+			</div>
+			<!-- END widget__deposit-->
+
+			<!-- BEGIN widget__top30-->
+			<div class="widget__top30">
+				<img src="img/top30.png">				
+				<p>
+					Ура! Ресторан входит в ТОП 30 ресторанов Gettable
+				</p>				
+			</div>
+			<!-- END widget__top30-->
+
+			<!-- BEGIN widget__bronow-->
+			<div class="widget__reservnow">
+				<img src="img/reservnow.png">
+				<div class="reservnow">
+					Лучше забронировать сейчас
+				</div>
+				<p>
+					По нашей статистике в ресторане Китайская грамота скоро закончатся свободные столики на вечер
+				</p>				
+			</div>
+			<!-- END widget__busy-->
+
+			<!-- BEGIN widget__busy-->
+			<div class="widget__busy">
+				<div class="busy">
+					На сегодня мест нет
+				</div>
+				<p>
+					5 похожих заведений,<br />где еще остались места на сегодня:
+				</p>
+				<img src="img/widget_busy.jpg">
+
+				<!-- BEGIN cycle-slideshow-->
+				
+				<div class="cycle-slideshow" data-cycle-timeout="4000" data-cycle-slides=".nobusy" data-cycle-next="#next_place" data-cycle-prev="#prev_place">
+					<div class="nobusy">
+						<div class="nobusy__name">
+							Mr. Lee								
+						</div>
+						<div class="nobusy__info">
+							Средний счет: 2500 руб.<br />
+							м. Смоленская								
+						</div>							
+					</div>
+
+					<div class="nobusy">
+						<div class="nobusy__name">
+							Mr. Lee 2
+						</div>
+						<div class="nobusy__info">
+							Средний счет: 2000 руб.<br />
+							м. Смоленская								
+						</div>							
+					</div>
+
+					<div class="nobusy">
+						<div class="nobusy__name">
+							Mr. Lee	3
+						</div>
+						<div class="nobusy__info">
+							Средний счет: 1900 руб.<br />
+							м. Смоленская								
+						</div>							
+					</div>
+					<div class="cycle-pager"></div>					
+				</div>
+				<a href="#" id="next_place"></a>
+				<a href="#" id="prev_place"></a>				
+				<!-- END cycle-slideshow-->				
+			</div>
+			<!-- END widget__busy-->
+
+			<!-- BEGIN widget__about-->
+			<div class="widget__about">
+				<div class="check">
+					Средний чек 3500 руб.
+				</div>
+				<div class="worktoday">
+					Сегодня работает до 6 утра
+				</div>
+				<div class="point">
+					Смоленская пл., д. 3<br />м. Смоленская
+				</div>
+				<div class="usphone">
+					8 (495) 255-11-66
+				</div>					
+			</div>
+			<!-- END widget__about-->
+
+			<div class="widget__map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2245.6415916914802!2d37.5823671!3d55.74735609999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bb6a540a8d7%3A0xd9e39cd28e288574!2z0KHQvNC-0LvQtdC90YHQutCw0Y8g0L_Quy4sIDMsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjEwOTk!5e0!3m2!1sru!2sua!4v1417454594501" width="288" height="111" frameborder="0" style="border:0"></iframe>
+			</div>						
+		</div>
+		<!-- END widgets-->
+	</div>
+	<!-- END wrapper -->
+
+	<!-- BEGIN social -->
+	<div class="social">
+		<div class="social__inner">
+			<a href="#" class="social__yandex">Мы <span></span> Яндекс</a>
+			<div class="social__count">
+				<span>638 человек</span><br />
+				сегодня бесплатно получили лучшие столики!
+			</div>
+			<div class="social__link">
+				<a href="#" class="social__fb"></a>
+				<a href="#" class="social__tw"></a>
+				<a href="#" class="social__in"></a>
+			</div>
+		</div>		
+	</div>
+	<!-- END social -->
+
+	<!-- BEGIN footer -->
+	<div class="footer">
+		<div class="footer__inner">
+			<div class="footer__description">
+				<div class="footer__logo">
+					Gettable					
+				</div>
+				<p>
+					© 2012 - 2014 GETTABLE
+					GetTable - быстрейшая служба бронирования столиков в ресторанах Москвы. Мы поможем вам выбрать, куда сходить сегодня вечером. 700+ лучших ресторанов в одном месте!
+				</p>
+				<p>
+					Закажите столик онлайн, и за 2 минуты для вас будет забронирован лучший столик абсолютно бесплатно.
+				</p>
+				<p>
+					8 (495) 255-11-66 звоните нам c 09.00 до 00.00 
+				</p>				
+			</div>
+			<!-- BEGIN footer__block -->
+			<div class="footer__block">
+				<div class="footer__header">
+					Категории					
+				</div>
+				<ul class="nav">
+					<li><a href="#">Рестораны</a></li>
+					<li><a href="#">Бары</a></li>
+					<li><a href="#">Клубы</a></li>
+					<li><a href="#">Кафе</a></li>
+					<li><a href="#">Пивные рестораны</a></li>
+					<li><a href="#">Караоке клубы</a></li>
+					<li><a href="#">Лучшие рестораны</a></li>
+					<li><a href="#">Рестораны с видом</a></li>
+					<li><a href="#">Круглосуточные</a></li>
+					<li><a href="#">Рестораны с верандой</a></li>						
+				</ul>		
+				<ul class="nav__ext">
+					<li><a href="#">Итальянские рестораны</a></li>
+					<li><a href="#">Русские рестораны</a></li>
+					<li><a href="#">Японские рестораны</a></li>
+					<li><a href="#">Грузинские рестораны</a></li>
+					<li><a href="#">Китайские рестораны</a></li>
+					<li><a href="#">Французские рестораны</a></li>
+					<li><a href="#">Европейские рестораны</a></li>
+					<li><a href="#">Американские рестораны</a></li>
+					<li><a href="#">Авторская кухня</a></li>
+					<li><a href="#">Рыбные рестораны</a></li>						
+				</ul>
+			</div>
+			<!-- END footer__block -->
+			<!-- BEGIN footer__block -->
+			<div class="footer__block">
+				<div class="footer__header">
+					Полезные ссылки					
+				</div>				
+				<ul class="nav__ext">
+					<li><a href="#">Оферта</a></li>
+					<li><a href="#">Пользовательское соглашение</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Карта сайта</a></li>					
+				</ul>
+			</div>
+			<!-- END footer__block -->
+		</div>		
+	</div>
+	<!-- END footer -->
+
+</div>
+<!-- END out-->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+
+<script>
+	function ShowHideSlider(){
+		var slider = document.getElementById("header__slider");
+		var block = document.getElementById("header__main");
+		
+		if (block.style.display == "none") {			
+			slider.style.display = "none";
+			block.style.display = "block";			
+		}
+		else {			
+			block.style.display = "none";
+			slider.style.display = "block";
+		}		
+	}	
+</script>
+
+</body>
+</html>
