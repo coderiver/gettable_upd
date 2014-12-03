@@ -23,14 +23,18 @@
 				Gettable
 			</div>
 			<div class="header__restincity">
-				745 ресторанов <a href="#" class="is-arrow-down">в Москве</a>
+				<div class="incity">
+					745 ресторанов <a href="#" class="is-arrow-down">в Москве</a>
+				</div>
+				
 				<ul class="popup_rest">
-					<li><a href="#"><span class="is-active-city"></span>Москва (745)</a></li>						
+					<li><a href="#"><span class="is-active-city"></span>Москва (745)</a></li>
 					<li><a href="#">Санкт-Петербург (67)</a></li>
 					<li><a href="#" class="is-absent">Нижний Новгород</a></li>
 					<li><a href="#" class="is-absent">Екатеринбург</a></li>
 				</ul>
-			</div>
+			</div>		
+
 			<a href="#" class="header__loginfree">Войти бесплатно</a>
 		</div>
 		<!-- END header__inner -->
@@ -107,6 +111,36 @@
 			<div class="searchrest__input">
 				<input type="text" name="s" class="searchrest__text" placeholder="Поиск по названию">
 				<input type="submit" class="searchrest__button" value="">
+
+				<div class="searchrest__result">
+					<div class="result">
+						Пушкин							
+						<p>
+							Саввинская набережная д.15
+						</p>
+					</div>
+
+					<div class="result">
+						Бенвенуто на велозаводской
+						<p>
+							Велозаводская улица, 3
+						</p>
+					</div>
+
+					<div class="result">
+						Sixty
+						<p>
+							Пресненская наб., 12, 62 этаж
+						</p>
+					</div>
+
+					<div class="result">
+						White Rabbit
+						<p>					
+							Смоленская пл., д. 3
+						</p>
+					</div>
+				</div>
 			</div>
 
 			<div class="searchrest__select">
@@ -116,7 +150,7 @@
 				</div>
 
 				<div class="searchrest__option">
-					<input id="check_gettable" type="checkbox" checked />
+					<input id="check_gettable" type="checkbox" name="check" checked />
 					<label for="check_gettable">С обзорами Gettable</label><br />
 					<input id="check_like" type="checkbox" />
 					<label for="check_like">Больше 20 лайков</label><br />
@@ -125,9 +159,71 @@
 				</div>
 
 				<ul class="searchrest__nav">
-					<li><a href="#">Особенности<span></span></a></li>
-					<li><a href="#">По станции метро<span></span></a></li>
-				</ul>				
+					<li class="is-sub">
+						<a href="#" onclick="getElementById('feature').style.display='block'; getElementById('searchrest__ext').style.display='block'; return(false)">Особенности<span></span></a>
+						<ul id="feature">
+							<a href="#" class="close" onclick="getElementById('feature').style.display='none'; getElementById('searchrest__ext').style.display='none'; return(false)"></a>
+							<li><a href="#">Итальянская кухня</a></li>
+							<li><a href="#">Кавказская кухня</a></li>
+						</ul>
+					</li>
+					<li class="is-sub"><a href="#">По станции метро<span></span></a></li>
+				</ul>
+
+				<div id="searchrest__ext">
+					<a href="#" class="close" onclick="getElementById('searchrest__ext').style.display='none'; return(false)"></a>
+					<!-- BEGIN column-->
+					<div class="column is-left">
+						<span class="column__popular">Популярное:</span><br />
+						<div class="column__items is-top">							
+							<input id="inp1" type="checkbox" checked />
+							<label for="inp1">Русская кухня</label><br />
+							<input id="inp2" type="checkbox" />
+							<label for="inp2">Итальянская кухня</label><br />
+							<input id="inp3" type="checkbox" />
+							<label for="inp3">Восточная кухня</label><br />
+							<input id="inp4" type="checkbox" />
+							<label for="inp4">Кавказская кухня</label>
+						</div>
+						
+						<span class="column__friday">Вечер пятницы:</span><br />
+						<div class="column__items">
+							<input id="inp5" type="checkbox" />
+							<label for="inp5">Ночной клуб</label><br />
+							<input id="inp6" type="checkbox" />
+							<label for="inp6">Танцевальный бар</label><br />
+							<input id="inp7" type="checkbox" />
+							<label for="inp7">Караоке</label>
+						</div>
+					</div>
+					<!-- END column-->
+
+					<!-- BEGIN column-->
+					<div class="column">
+						<span class="column__formen">Для парней:</span><br />
+						<div class="column__items is-top">							
+							<input id="inp8" type="checkbox" />
+							<label for="inp8">Паб</label><br />
+							<input id="inp9" type="checkbox" />
+							<label for="inp9">Стейки и бургеры</label><br />
+							<input id="inp10" type="checkbox" />
+							<label for="inp10">Пивной ресторан</label><br />
+							<input id="inp11" type="checkbox" />
+							<label for="inp11">Стриптиз клуб</label>
+						</div>
+						
+						<span class="column__she">Своди ее сюда:</span><br />
+						<div class="column__items">							
+							<input id="inp12" type="checkbox" />
+							<label for="inp12">Рыбный ресторан</label><br />
+							<input id="inp13" type="checkbox" />
+							<label for="inp13">Винотека</label><br />
+							<input id="inp14" type="checkbox" />
+							<label for="inp14">Суши и сашими</label>
+						</div>
+					</div>
+					<!-- END column-->
+				</div>
 			</div>			
 		</div>
 		<!-- END searchrest -->
@@ -279,53 +375,37 @@
 
 			<div class="famous">
 				<img src="img/ginzaproject.png" alt="">
-				<p>
-					Ginza Project
-				</p>
+				<a href="#">Ginza Project</a>
 			</div>
 
 			<div class="famous">
 				<img src="img/chaihona.png" alt="">
-				<p>
-					Чайхона №1<br />
-					Lounge Cafe
-				</p>
+				<a href="#">Чайхона №1<br />Lounge Cafe</a>				
 			</div>
 
 			<div class="famous">
 				<img src="img/kimchi.png" alt="">
-				<p>
-					KIMCHI
-				</p>
+				<a href="#">KIMCHI</a>
 			</div>
 
 			<div class="famous">
 				<img src="img/okidoki.png" alt="">
-				<p>
-					Оки Dоkи
-				</p>
+				<a href="#">Оки Dоkи</a>
 			</div>
 
 			<div class="famous">
 				<img src="img/novikov.png" alt="">
-				<p>
-					Novikov Group
-				</p>
+				<a href="#">Novikov Group</a>
 			</div>
 
 			<div class="famous">
 				<img src="img/kimchi.png" alt="">
-				<p>
-					KIMCHI 2
-				</p>
+				<a href="#">KIMCHI 2</a>
 			</div>
 
 			<div class="famous">
 				<img src="img/chaihona.png" alt="">
-				<p>
-					Чайхона №1<br />
-					Lounge Cafe 2
-				</p>
+				<a href="#">Чайхона №1<br />Lounge Cafe 2</a>
 			</div>			
 
 			<div class="cycle-pager"></div>

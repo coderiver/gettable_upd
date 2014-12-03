@@ -69,15 +69,23 @@
 
 +font(geinsp, ge-inspira)
 =geinsp
-	font-family: "geinsp", Arial, sans-serif	
+	font-family: "geinsp", Arial, sans-serif
+
++font(geinspB, ge-inspira-bold)
+=geinspB
+	font-family: "geinspB", Arial, sans-serif	
 
 body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
-	background: #e3e3e3	
+	background: url(../img/icons/bg.jpg)
 
 // common blocks
+
+.out__gramota
+	background: #e3e3e3
+
 .in
 	width: 1000px
 	margin: 0 auto
@@ -106,8 +114,12 @@ a
 	.counter__down:hover
 		+s(counter_down_hover)
 
+.searchrest
+	margin-bottom: 40px
+
 .searchrest__input
 	position: relative
+	z-index: 300
 	
 	.searchrest__text
 		+geinsp
@@ -120,24 +132,83 @@ a
 		font-size: 14px
 		+OpenSans
 		color: #000
-		background: #fff
+		background: #fff		
 
 	.searchrest__button
 		+s(search_name)			
 		position: absolute
-		top: 0px
+		top: 2px
 		left: 0px
 
-input
-	width: 16px
-	height: 16px
-	background: #123456
-	position: relative
-	top: 3px
-	margin-right: 8px
+	.searchrest__button:hover + div
+		display: block
 
-input:checked + label
+	.searchrest__result
+		display: none
+		background: #fff		
+		width: 230px
+		position: absolute
+		top: 36px
+		z-index: 200
+		border: 1px solid #e1e1e1
+		padding: 10px 0
+
+		.result
+			cursor: pointer
+			+OpenSans
+			font-size: 16px
+			padding: 7px 15px
+
+			p
+				color: #969696
+				font-size: 14px
+
+		.result:hover
+			background: #f5f5f5
+
+	.searchrest__result:hover
+		display: block
+
+label	
+	cursor: pointer
+	position: relative
+	padding-left: 25px
+	margin-right: 15px
+	font-size: 15px
+	+geinsp
+	color: #7b7b7b
+
+label:hover, input[type=checkbox]:checked + label
 	color: #000
+
+input[type=checkbox]
+	display: none
+
+label:before
+	content: ''
+	width: 16px
+	height: 15px
+	margin-right: 10px
+	position: absolute
+	left: 0
+	bottom: 1px
+	background: #e3e3e3
+	border-top: 1px solid #b5b5b5
+
+.checkbox label
+	margin-bottom: 10px
+
+.checkbox label:before
+	border-radius: 3px
+
+input[type=checkbox]:checked + label:before
+	content: "\2713"
+	font-size: 15px
+	color: #f3f3f3
+	text-align: center
+	line-height: 15px
+	background: #9b9b9b
+
 
 // PAGER
 .cycle-pager
@@ -207,6 +278,7 @@ input:checked + label
 			float: left				
 
 		.header__photo
+			+OpenSansL
 			font-size: 16px			
 			border-bottom: 1px dashed #fff				
 			color: #fff
@@ -246,12 +318,23 @@ input:checked + label
 	.slider__close:hover
 		+s(slider_close_hover)
 
+	.is-img-left
+		position: absolute
+		left: 0px
+		top: 91px
+
+	.is-img-right
+		position: absolute
+		right: 0px
+		top: 91px
+
 	#next
 		+s(slide_next)
 		display: block
 		position: absolute
 		right: 84px
-		top: 271px			
+		top: 271px
+		z-index: 200			
 
 	#next:hover
 		+s(slide_next_hover)			
@@ -261,7 +344,8 @@ input:checked + label
 		display: block
 		position: absolute
 		left: 84px
-		top: 271px			
+		top: 271px
+		z-index: 200			
 
 	#prev:hover
 		+s(slide_prev_hover)
@@ -276,7 +360,8 @@ input:checked + label
 		float: left
 			
 	.header__turnphoto			
-		font-size: 16px			
+		+OpenSansL
+		font-size: 16px
 		border-bottom: 1px dashed #fff				
 		color: #fff
 		position: absolute
@@ -320,21 +405,23 @@ input:checked + label
 			+OpenSans
 			font-size: 14px			
 
+			.incity
+				position: relative
+				z-index: 400
+				width: 200px
+				text-align: right
+				
 			a
 				margin-right: 20px
 				color: #2464c1
-				position: relative
-				z-index: 300
+				position: relative				
 
 			a:hover
 				text-decoration: underline			
 
-			a:hover + ul
-				display: block
-
 			.is-arrow-down
 				position: relative
-			
+					
 			.is-arrow-down:after
 				content: ' '
 				+s(arrow_yandex)
@@ -344,7 +431,7 @@ input:checked + label
 
 			.is-arrow-right
 				position: relative
-			
+					
 			.is-arrow-right:after
 				content: ' '
 				+s(is-arrow-right)
@@ -352,18 +439,22 @@ input:checked + label
 				top: 6px
 				right: -15px
 
+			.incity:hover + .popup_rest
+				display: block
+
 			.popup_rest
 				position: absolute
-				top: -10px
-				left: 0px
+				top: -15px
+				right: -15px
 				background: #fff
-				padding-top: 60px
+				padding-top: 50px
 				z-index: 200
 				border-radius: 6px
 				text-align: right
-				width: 205px
+				width: 225px
 				padding-bottom: 20px
 				display: none
+				z-index: 200
 
 				&:hover
 					display: block
@@ -385,7 +476,7 @@ input:checked + label
 					color: #c6c6c6
 
 					&:hover
-						background: transparent
+						background: #f9f9f9
 
 				.is-active-city
 					position: relative
@@ -421,41 +512,36 @@ input:checked + label
 	padding: 20px 0px 5px 20px
 	background: #f1f1f2
 	border-radius: 10px
-	float: left
-	
+	float: left	
+
 	.searchrest__select
 		border-top: 1px solid #e2e1e3
 		margin-top: 20px
-		padding-top: 16px		
+		padding-top: 16px
+		position: relative		
 
 		.searchrest__button
 			font-size: 0px
 			margin-bottom: 20px
+			white-space: nowrap						
 
 			a
 				display: inline-block
+				+geinsp
 				font-size: 13px
+				padding-top: 8px
 
 			.popular
-				padding-top: 10px
-				background: #636363
-				color: #fff			
-				height: 27px
-				width: 104px
-				text-align: center
-				border-radius: 5px 0 0 5px
-				border-top: 3px solid #414141			
+				+s(popular_bg)				
+				color: #fff				
+				text-align: center				
 
-			.new			
-				background: #fdfdfd
-				padding-top: 12px			
-				color: #000			
-				height: 24px
-				width: 83px
+			.new				
+				+s(new_bg)				
+				color: #000				
 				text-align: center
-				border-radius: 0 5px 5px 0
-				border-bottom: 3px solid #b1b0b2
-
+				
+		
 		.searchrest__option
 			line-height: 35px
 			color: #7b7b7b
@@ -468,7 +554,7 @@ input:checked + label
 			+OpenSansL
 			font-size: 18px
 
-			li
+			.is-sub
 				border-top: 1px solid #e1e2e1
 
 				a
@@ -488,6 +574,146 @@ input:checked + label
 				a:hover
 					color: #000
 					+OpenSans
+
+				ul
+					margin-bottom: 20px
+					display: none
+					position: relative
+
+					.close
+						+s(close_small)
+						display: block
+						position: absolute
+						top: -35px
+						right: 14px
+
+					li
+						+geinsp
+						font-size: 13px
+
+						a						
+							line-height: 20px
+							height: 20px
+
+						a:hover
+							+geinsp
+							color: #000
+
+		.searchrest__metro
+			+geinsp
+			font-size: 15px
+			color: #7b7b7b
+			margin-right: 23px
+			position: relative
+
+			.metrostation
+				padding: 5px 15px
+				border: 1px solid #c1c1c1
+				border-radius: 6px
+				background: #f8f8f8
+				position: relative
+				cursor: pointer
+
+			.metrostation:after
+				content: ' '
+				+s(arrow_metro)
+				position: absolute
+				top: 13px
+				right: 13px
+
+			.metrostation:hover + ul, ul:hover
+				display: block
+
+			ul
+				padding-top: 10px
+				background: #f8f8f8
+				border-left: 1px solid #c1c1c1
+				border-right: 1px solid #c1c1c1
+				border-bottom: 1px solid #c1c1c1
+				border-radius: 0 0 6px 6px
+				position: absolute
+				top: 29px
+				display: none
+				z-index: 200
+				padding-bottom: 5px				
+
+				li
+					padding: 4px 15px
+				
+					a
+						color: #7b7b7b
+						display: block
+
+				li:hover
+					background: #ececec
+
+		#searchrest__ext
+			display: none
+			line-height: 35px
+			color: #7b7b7b
+			font-size: 15px
+			padding-top: 21px
+			padding-bottom: 21px
+			+geinsp
+			position: absolute
+			top: -78px
+			left: 265px
+			background: #fff
+			border-radius: 8px
+			width: 490px
+			z-index: 200
+			border: 1px solid #d1cfd1
+
+			.close
+				display: block
+				+s(close_small)
+				position: absolute
+				right: 15px
+				top: 15px
+
+			.column
+				float: left
+				padding: 0px 30px
+
+				span
+					+OpenSansL
+					font-size: 20px
+					color: #000
+					margin-left: 35px					
+					position: relative					
+				
+				@each $s in popular, friday, formen, she
+					.column__#{$s}:before
+						+s(ext_#{$s})
+						content: ' '					
+						position: absolute
+
+				.column__popular:before
+					top: -10px
+					left: -45px
+
+				.column__friday:before
+					top: -10px
+					left: -42px
+
+				.column__formen:before
+					top: -10px
+					left: -42px
+
+				.column__she:before
+					top: -6px
+					left: -53px
+
+				.column__items
+					margin-top: 11px					
+
+			.is-left
+				border-right: 1px solid #e5e5e5
+
+			.is-top
+				margin-bottom: 20px
+					
+
 
 // SOCIAL
 .social	

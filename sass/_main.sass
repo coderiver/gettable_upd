@@ -458,8 +458,8 @@
 				+OpenSansL
 				margin-top: 10px
 				font-size: 30px
-				color: #212121
-				line-height: 40px
+				color: #555555
+				line-height: 40px				
 
 .restaurants
 	float: right
@@ -533,10 +533,8 @@
 
 		.ribbon-red
 			+s(ribbon_red)
-			+geinsp
-			font-weight: bold
-			color: #fff
-			text-transform: uppercase
+			+geinspB			
+			color: #fff			
 			font-size: 18px
 			padding-top: 5px
 			text-align: center
@@ -544,13 +542,12 @@
 			top: 8px
 			right: -14px
 			padding-left: 8px
+			text-shadow: 1px 1px 3px #891b00
 
 		.ribbon-yellow
 			+s(ribbon_yellow)
-			+geinsp
-			font-weight: bold
-			color: #fff
-			text-transform: uppercase
+			+geinspB			
+			color: #fff			
 			font-size: 18px
 			padding-top: 5px
 			text-align: center
@@ -558,6 +555,7 @@
 			top: 8px
 			right: -14px
 			padding-left: 8px
+			text-shadow: 1px 1px 3px #956010
 
 	.read_more
 		+geinsp
@@ -578,7 +576,7 @@
 	padding-top: 30px
 	+OpenSans
 	position: relative
-	height: 280px	
+	height: 280px		
 
 	.sliderfamous__header
 		text-align: center		
@@ -597,15 +595,20 @@
 		text-align: center
 		padding-right: 15px		
 		padding-left: 15px
-		width: 135px
+		width: 150px		
+		height: 220px
+		white-space: normal			
 
-		p
-			margin-top: 10px
-			margin-bottom: 40px
-			text-align: center
+		img
+			margin-bottom: 10px			
+
+		a						
 			font-size: 14px
-			color: #212022
-			white-space: normal
+			color: #212022			
+
+		a:hover
+			clear: both
+			text-decoration: underline			
 			
 	#prev_famous		
 		display: block
@@ -664,6 +667,18 @@
 		top: -10px
 		left: -70px
 
+	.steak
+		position: relative		
+		margin-left: 70px
+		margin-right: 15px
+
+	.steak:before
+		content: ' '
+		+s(steak)
+		position: absolute
+		top: -12px
+		left: -55px
+
 	.public__select
 		color: #000
 		border-bottom: 1px dashed #212121
@@ -681,3 +696,71 @@
 	a:hover
 		border: none
 		color: #2a5087
+
+.nofind
+	@extend .in
+	text-align: center
+	padding-top: 35px
+	padding-bottom: 35px
+
+	img
+		margin-bottom: 20px
+
+	p
+		+OpenSansL
+		font-size: 24px
+		
+
+.tenplace
+	width: 1067px
+	margin: 0 auto
+	border-bottom: 1px solid #aaaaaa
+	overflow: hidden	
+	margin-bottom: 38px	
+	padding: 38px 34px 0px 34px	
+
+	img		
+		float: left
+		margin-right: 30px		
+
+	.tenplace__info
+		padding-top: 22px
+		color: #212121		
+
+		h3
+			+OpenSans
+			font-size: 30px			
+			margin-bottom: 30px
+
+		p
+			+OpenSansL
+			font-size: 20px
+			margin-bottom: 23px
+			line-height: 25px
+
+.nearmetro
+	width: 1135px
+	margin: 0 auto
+	border-bottom: 1px solid #aaaaaa
+	overflow: hidden
+	padding-top: 36px
+	padding-bottom: 36px
+	margin-bottom: 38px
+
+	img		
+		float: left
+		margin-right: 50px
+		margin-left: 180px
+
+	.nearmetro__info		
+		color: #212121		
+
+		h3
+			+OpenSans
+			font-size: 30px			
+
+		p
+			+OpenSansL
+			font-size: 20px
+			margin-top: 18px
+			line-height: 25px
