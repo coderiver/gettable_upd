@@ -128,11 +128,11 @@ input[type=checkbox]:checked + label:before { content: "✓"; font-size: 15px; c
 
 .searchrest { width: 255px; padding: 20px 0px 5px 20px; background: #f1f1f2; border-radius: 10px; float: left; }
 .searchrest .searchrest__select { border-top: 1px solid #e2e1e3; margin-top: 20px; padding-top: 16px; position: relative; }
-.searchrest .searchrest__select .searchrest__button { font-size: 0px; margin-bottom: 20px; white-space: nowrap; }
-.searchrest .searchrest__select .searchrest__button a { display: inline-block; font-family: "geinsp", Arial, sans-serif; font-size: 13px; padding-top: 8px; }
+.searchrest .searchrest__select .searchrest__button { font-size: 0px; margin-bottom: 55px; }
+.searchrest .searchrest__select .searchrest__button a { float: left; font-family: "geinsp", Arial, sans-serif; font-size: 13px; padding-top: 8px; }
 .searchrest .searchrest__select .searchrest__button .popular { background: url('../img/icons-sb5924f80f6.png') 0 -1559px no-repeat; width: 104px; height: 34px; color: #fff; text-align: center; }
 .searchrest .searchrest__select .searchrest__button .new { background: url('../img/icons-sb5924f80f6.png') 0 -1212px no-repeat; width: 84px; height: 36px; color: #000; text-align: center; }
-.searchrest .searchrest__select .searchrest__option { line-height: 35px; color: #7b7b7b; font-size: 15px; padding-bottom: 8px; font-family: "geinsp", Arial, sans-serif; }
+.searchrest .searchrest__select .searchrest__option { clear: both; line-height: 35px; color: #7b7b7b; font-size: 15px; padding-bottom: 8px; font-family: "geinsp", Arial, sans-serif; }
 .searchrest .searchrest__select .searchrest__nav { margin-top: 12px; font-family: "OpenSansL", Arial, sans-serif; font-size: 18px; }
 .searchrest .searchrest__select .searchrest__nav .is-sub { border-top: 1px solid #e1e2e1; }
 .searchrest .searchrest__select .searchrest__nav .is-sub a { display: block; line-height: 60px; height: 60px; color: #595959; position: relative; }
