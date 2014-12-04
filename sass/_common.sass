@@ -79,7 +79,7 @@ body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
-	background: url(../img/icons/bg.jpg)
+	background: url(../img/bg.jpg)
 
 // common blocks
 
@@ -148,7 +148,7 @@ a
 		background: #fff		
 		width: 230px
 		position: absolute
-		top: 36px
+		top: 32px
 		z-index: 200
 		border: 1px solid #e1e1e1
 		padding: 10px 0
@@ -384,6 +384,227 @@ input[type=checkbox]:checked + label:before
 		top: 5px
 		right: -30px
 
+.outletter
+	width: 700px
+	margin: 0 auto	
+	border: 1px solid #c3c3c3
+	background: url(../img/letter_bg.jpg)
+
+	.headerletter	
+		height: 75px		
+		color: #212121
+		line-height: 75px
+		padding: 0 35px		
+
+		.headerletter__logo
+			+OpenSansL
+			font-size: 32px		
+			float: left
+
+		span
+			float: right
+			+OpenSans
+			font-size: 18px
+
+	.proposition
+		background: url(../img/proposition_bg.jpg)
+		padding: 50px 35px 50px 60px
+		border-top: 1px solid #c3c3c3
+		border-bottom: 1px solid #c3c3c3
+
+		img
+			float: left
+			margin-right: 36px
+
+		.proposition__info
+			overflow: hidden
+
+			.proposition__header
+				+OpenSansSB
+				font-size: 18px
+				color: #212121
+
+			p
+				+OpenSansL
+				font-size: 18px
+				color: #3a3a3a
+				margin-top: 25px
+
+				span
+					+OpenSans
+					color: #212121
+
+	.contentletter
+		padding: 0px 25px		
+
+		.contentletter__block
+			margin-top: 40px
+			background: #f7f7f7
+			border: 1px solid #d5d8d8
+			position: relative
+
+			img
+				float: left
+
+			.contentletter__ribbon
+				+s(letter_ribbon)
+				position: absolute
+				top: 9px
+				left: -5px
+				color: #fff
+				+geinspB
+				font-size: 18px
+				text-align: center
+				line-height: 32px
+				text-shadow: 2px 2px 1px #b12200				
+
+				span
+					margin-right: 15px
+
+			.contentletter__info
+				background: #fff
+				padding: 18px 16px 25px 14px
+				overflow: hidden
+				+geinsp
+				text-shadow: 0px 0px 1px #b5b5b5 
+				
+				.contentletter__header					
+					font-size: 23px
+					color: #000
+					line-height: 19px
+					padding: 0px 7px
+
+					.address
+						font-size: 15px
+						color: #b8b8b8		
+						position: relative
+						margin-left: 16px
+
+					.address:before
+						content: ' '
+						+s(point_address)
+						position: absolute
+						top: 1px
+						left: -15px
+
+					.like
+						float: right
+						position: relative						
+						font-size: 18px						
+						color: #727272						
+
+					.like:before
+						content: ' '
+						+s(like_grey)
+						position: absolute
+						top: 0px
+						left: -26px
+
+					p					
+						margin-top: 20px
+						margin-bottom: 15px
+						font-size: 15px
+						color: #181818
+						padding: 0px 7px					
+
+				table
+					border-top: 1px dashed #d5d5d5					
+
+					th
+						text-align: left						
+						+geinsp
+						font-size: 16px
+						color: #181818
+						font-weight: 100
+						padding-left: 4px
+						padding-top: 14px
+						height: 32px						
+
+					.is-darked
+						background: #fafafa
+
+					td
+						padding-left: 4px
+						+geinsp
+						font-size: 15px
+						color: #858585
+
+				.contentletter__opinion, .contentletter__mind
+					border-top: 1px dashed #d5d5d5
+					padding-left: 80px
+					margin-top: 20px
+					padding-top: 20px
+					position: relative
+					+geinsp
+					font-size: 15px					
+
+					span						
+						color: #000						
+
+					p
+						color: #8a8a8a
+						margin-top: 10px
+						padding-right: 40px
+
+				.contentletter__opinion:before
+					content: ' '
+					+s(advice)
+					position: absolute
+					top: 20px
+					left: 7px
+
+				.contentletter__phone					
+					padding-left: 80px
+					padding-top: 20px
+					position: relative
+					+geinsp
+					font-size: 15px
+					color: #333333
+					position: relative
+
+					p
+						margin-bottom: 10px
+
+					span
+						font-size: 24px
+
+				.contentletter__phone:before
+					content: ' '
+					+s(letter_phone)
+					position: absolute
+					top: 28px
+					left: 13px
+
+				.contentletter__mind:before
+					content: ' '
+					+s(letter_quotes)
+					position: absolute
+					top: 24px
+					left: 15px
+	
+	.letter__metadata
+		text-align: center
+		+OpenSans
+		font-size: 14px
+		color: #212121
+		padding-top: 40px
+		padding-bottom: 25px
+
+		span
+			font-size: 24px					
+
+		p
+			margin-bottom: 25px
+
+	.footerletter
+		height: 75px
+		background: #212022
+		text-align: center
+		line-height: 75px
+		+OpenSansL
+		color: #858586
+		font-size: 16px
+
 .header
 
 	.header__inner		
@@ -506,6 +727,7 @@ input[type=checkbox]:checked + label:before
 
 		.header__loginfree:hover
 			text-decoration: underline
+
 
 .searchrest
 	width: 255px
