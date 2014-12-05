@@ -79,7 +79,7 @@ body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
-	background: url(../img/bg.png) repeat-x repeat-y	
+	background: url(../img/bg.png)
 
 .letter
 	background: #fff
@@ -358,9 +358,9 @@ input[type=checkbox]:checked + label:before
 	#prev:hover
 		+s(slide_prev_hover)
 
-	.cycle-slideshow
+	.slideshow
 		width: 600px
-		margin: 0 auto
+		margin: 0 auto		
 
 	.header__name
 		margin-top: 47px			
@@ -396,7 +396,7 @@ input[type=checkbox]:checked + label:before
 	width: 700px
 	margin: 0 auto	
 	border: 1px solid #c3c3c3
-	background: url(../img/letter_bg.jpg)
+	background: #eeefee
 
 	.headerletter	
 		height: 75px		
@@ -415,10 +415,10 @@ input[type=checkbox]:checked + label:before
 			font-size: 18px
 
 	.proposition
-		background: url(../img/proposition_bg.jpg)
+		background: #e9e8e8
 		padding: 50px 35px 50px 60px
-		border-top: 1px solid #c3c3c3
-		border-bottom: 1px solid #c3c3c3
+		border-top: 1px solid #cfcfd0
+		border-bottom: 1px solid #cfcfd0
 
 		img
 			float: left
@@ -435,7 +435,7 @@ input[type=checkbox]:checked + label:before
 			p
 				+OpenSansL
 				font-size: 18px
-				color: #3a3a3a
+				color: #000
 				margin-top: 25px
 
 				span
@@ -460,10 +460,12 @@ input[type=checkbox]:checked + label:before
 				top: 9px
 				left: -5px
 				color: #fff
+				font-weight: 100
 				+geinspB
 				font-size: 18px
 				text-align: center
-				line-height: 32px				
+				padding-top: 5px
+				text-shadow: 1px 1px 3px #891b00
 
 				span
 					margin-right: 15px
@@ -635,7 +637,7 @@ input[type=checkbox]:checked + label:before
 
 			.incity
 				position: relative
-				z-index: 400
+				z-index: 500
 				width: 200px
 				text-align: right
 				
@@ -682,7 +684,7 @@ input[type=checkbox]:checked + label:before
 				width: 225px
 				padding-bottom: 20px
 				display: none
-				z-index: 200
+				z-index: 400
 
 				&:hover
 					display: block
@@ -734,7 +736,6 @@ input[type=checkbox]:checked + label:before
 
 		.header__loginfree:hover
 			text-decoration: underline
-
 
 .searchrest
 	width: 255px

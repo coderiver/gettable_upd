@@ -7,10 +7,6 @@
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
-
-	<script src="js/lib/jquery.js"></script>
-	<script src="js/lib/cycle.js"></script>
-	<script src="js/lib/cycle.carousel.js"></script>
 </head>
 <body>
 <!-- BEGIN  out-->
@@ -41,7 +37,7 @@
 			<div class="slider">
 				<a href="#" class="slider__close" onclick="ShowHideSlider()"></a>
 
-				<div class="cycle-slideshow" data-cycle-timeout="4000" data-cycle-next="#next" data-cycle-prev="#prev">
+				<div class="slideshow" data-cycle-timeout="4000" data-cycle-next="#next" data-cycle-prev="#prev">
 					<img src="img/slide1.jpg" alt="Слайд 1" />
 					<img src="img/slide1.jpg" alt="Слайд 2" />
 					<img src="img/slide1.jpg" alt="Слайд 3" />
@@ -201,8 +197,8 @@
 					</p>
 				</div>
 				
-				<!-- BEGIN cycle-slideshow-->
-				<div class="cycle-slideshow" data-cycle-timeout="4000" data-cycle-auto-height="calc" data-cycle-slides=".comments__block" data-cycle-next="#next_comm" data-cycle-prev="#prev_comm">
+				<!-- BEGIN slideshow-->
+				<div class="slideshow" data-cycle-timeout="4000" data-cycle-auto-height="calc" data-cycle-slides=".comments__block" data-cycle-next="#next_comm" data-cycle-prev="#prev_comm">
 					<div class="comments__block">
 						<div class="guest">
 							<img src="img/guest1.png" alt="">
@@ -271,7 +267,7 @@
 
 					<div class="cycle-pager is-resize"></div>
 				</div>
-				<!-- END cycle-slideshow-->
+				<!-- END slideshow-->
 
 				<a href="#" id="next_comm"></a>
 				<a href="#" id="prev_comm"></a>
@@ -423,9 +419,8 @@
 				</p>
 				<img src="img/widget_busy.jpg">
 
-				<!-- BEGIN cycle-slideshow-->
-				
-				<div class="cycle-slideshow" data-cycle-timeout="4000" data-cycle-slides=".nobusy" data-cycle-next="#next_place" data-cycle-prev="#prev_place">
+				<!-- BEGIN slideshow-->				
+				<div class="slideshow" data-cycle-timeout="4000" data-cycle-slides=".nobusy" data-cycle-next="#next_place" data-cycle-prev="#prev_place">
 					<div class="nobusy">
 						<div class="nobusy__name">
 							Mr. Lee								
@@ -459,7 +454,7 @@
 				</div>
 				<a href="#" id="next_place"></a>
 				<a href="#" id="prev_place"></a>				
-				<!-- END cycle-slideshow-->				
+				<!-- END slideshow-->				
 			</div>
 			<!-- END widget__busy-->
 
@@ -577,19 +572,7 @@
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 
 <script>
-	function ShowHideSlider(){
-		var slider = document.getElementById("header__slider");
-		var block = document.getElementById("header__main");
 		
-		if (block.style.display == "none") {			
-			slider.style.display = "none";
-			block.style.display = "block";			
-		}
-		else {			
-			block.style.display = "none";
-			slider.style.display = "block";
-		}		
-	}	
 </script>
 
 </body>
