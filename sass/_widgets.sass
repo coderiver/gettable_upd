@@ -1,3 +1,20 @@
+.widget-counter	
+
+	a
+		display: block		
+
+	.counter-up		
+		+s(widget-count-up)		
+
+	.counter-up:hover
+		+s(widget-count-up-hover)
+
+	.counter-down
+		+s(widget-count-down)		
+
+	.counter-down:hover
+		+s(widget-count-down-hover)
+
 .widgets
 	width: 295px
 	position: absolute
@@ -473,3 +490,262 @@
 			+s(usphone)
 			top: 0px
 			left: -38px
+
+.ordertable
+	width: 725px
+	margin: 0 auto
+	display: block
+
+	.ordertable__leftcol
+		width: 236px
+		background: #e7e7e7	
+		text-align: center		
+		position: relative
+		float: left
+		padding-bottom: 28px
+		height: 482px
+		
+		.ordertable__info
+			position: relative
+			padding-top: 100px			
+
+			.name
+				+OpenSansSB
+				font-size: 18px
+				color: #000
+
+			.address
+				+OpenSans
+				font-size: 14px
+				color: #828282
+				margin-top: 6px
+
+		.ordertable__info:before
+			content: ' '
+			+s(widget_plate)
+			position: absolute
+			top: 30px
+			left: 90px
+
+		.ordertable__metadata
+			margin-top: 260px			
+			width: 100%
+			color: #818181
+			+OpenSans
+			font-size: 14px
+
+			.howitsmade
+				font-size: 12px
+				margin-top: 2px
+				border-bottom: 1px solid #cdcdcd
+				color: #818181				
+
+	.ordertable__rightcol		
+		width: 422px		
+		padding: 21px 31px 28px 36px		
+		background: #fff
+		position: relative
+		height: 461px
+		float: right		
+
+		.caption
+			border-bottom: 1px dashed #cccccc
+			color: #5d5d5d
+			+OpenSansSB
+			font-size: 18px
+			padding-bottom: 16px
+	
+		.close
+			+s(widget_close_b)
+			position: absolute
+			top: 30px
+			right: 58px
+
+		.close:hover
+			+s(widget_close_b_hover)
+
+		.order
+			margin-top: 22px
+
+			.date
+				padding-left: 16px					
+				position: relative
+				display: block
+				color: #000
+				+OpenSans
+				font-size: 14px				
+				width: 246px
+				height: 36px
+				line-height: 36px
+				border: 1px solid #c4c4c4
+				border-radius: 4px
+				float: left
+				margin-bottom: 14px	
+
+			.date:after
+				content: ' '
+				+s(calendar_b)
+				position: absolute
+				top: 8px
+				right: 12px					
+
+				span					
+					width: 201px
+					display: block
+					border-right: 1px solid #c4c4c4
+					position: relative
+
+				span:after
+					content: ' '
+					+s(arrow_date)
+					position: absolute
+					top: 16px
+					right: 18px
+
+			.count
+				text-align: center				
+				+OpenSans
+				font-size: 14px				
+				width: 85px
+				padding-right: 30px
+				height: 36px
+				line-height: 36px
+				border: 1px solid #c4c4c4
+				border-radius: 4px
+				position: relative
+				float: right				
+
+				.widget-counter
+					position: absolute
+					top: 0px
+					right: 0px
+
+			.selecttime
+				clear: both
+				margin-left: -2px
+
+				li
+					display: inline-block
+					margin-left: 2px
+					margin-top: 5px
+					position: relative
+					text-align: center
+						
+					a
+						display: block
+						width: 56px
+						height: 21px
+						padding-top: 7px
+						+OpenSans
+						font-size: 12px
+						color: #494949
+						background: #f1f1f1
+						border-radius: 4px
+
+					a:hover
+						background: #c4c4c4
+						border-radius: 4px
+
+					.is-active
+						background: #606060
+						color: #fff
+
+					.clock__prev
+						position: relative
+						
+					.clock__prev:before
+						content: ' '
+						position: absolute
+						+s(clock_prev)
+						top: 7px
+						left: 22px
+						opacity: 0.4
+
+					.clock__next
+						position: relative
+						
+					.clock__next:before
+						content: ' '
+						position: absolute
+						+s(clock_next)
+						top: 7px
+						right: 22px
+						opacity: 0.4
+
+			.guest
+				margin-top: 22px
+
+				.guest__name, .guest__phone
+					border: 1px solid #c4c4c4
+					border-radius: 4px
+					width: 260px					
+					height: 36px
+					position: relative
+					text-align: right
+					margin-bottom: 14px				
+
+				.guest__name:before
+					content: ' '
+					+s(men)
+					position: absolute
+					top: 7px
+					left: 11px
+
+				.guest__phone:before
+					content: ' '
+					+s(phone_small)
+					position: absolute
+					top: 7px
+					left: 11px
+
+				input
+					height: 100%
+					width: 207px
+					color: #8f8f8f
+					+OpenSans
+					font-size: 14px
+					border-radius: 4px
+					padding-left: 38px
+					padding-right: 15px
+
+				.guest__wish					
+					position: relative					
+
+					a
+						+s(list)
+						position: absolute
+						top: 10px
+						right: 12px
+
+				textarea
+					border: 1px solid #c4c4c4
+					border-radius: 4px
+					width: 369px					
+					height: 56px			
+					border-radius: 4px
+					resize: none
+					+OpenSans
+					font-size: 14px
+					padding: 10px 36px 11px 15px
+					overflow: hidden
+
+			.oferta
+				width: 222px
+				+OpenSans
+				font-size: 12px
+				color: #8f8f8f
+				margin-top: 28px
+				float: left
+
+				a
+					color: #8f8f8f
+					text-decoration: underline
+
+			.reservation
+				float: right
+				padding: 11px 25px
+				background: #56905a
+				color: #fff
+				+OpenSansSB
+				font-size: 16px
+				margin-top: 24px
