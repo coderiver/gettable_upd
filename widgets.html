@@ -11,7 +11,8 @@
 </head>
 <body style="background: rgba(0, 0, 0, 0.7); padding: 40px 0px">
 <!-- BEGIN  out-->
-<div class="out">
+<div class="outwidgets">	
+	<!-- BEGIN ordertable -->	
 	<div class="ordertable">
 		<!-- BEGIN ordertable__leftcol -->
 		<div class="ordertable__leftcol">
@@ -23,6 +24,26 @@
 					Ресторан китайской кухни<br />Смоленская пл., д. 3
 				</p>
 			</div>
+			
+			<div class="ordertable__special">
+				<a href="#">Особые условия</a>
+			</div>
+
+			<div class="ordertable__veranda">
+				<a href="#">Важно про веранду</a>
+			</div>
+<!--
+			<div class="ordertable__top30">
+				ТОП 30 Gettable
+			</div>
+
+			<div class="ordertable__bonus">
+				<span>+167 баллов</span>
+				<p>
+					будет зачислено<br />за это бронирование
+				</p>
+			</div>
+-->
 			<div class="ordertable__metadata">
 				<div class="site">
 					Gettable
@@ -43,7 +64,47 @@
 			</div>
 
 			<div class="order">
-				<a href="#" class="date"><span>Понедельник, 20 сент.</span></a>
+				<div class="date">
+				<span class="date__selected">Понедельник, 20 сент.</span>
+				<a href="#" class="icon-calendar"></a>
+
+				<!-- BEGIN calendar -->
+				<div class="calendar">
+					<div class="calendar__inner">
+						<div class="calendar__date">						
+							<span class="month">Ноябрь</span>
+							<span class="year">2014</span>							
+							<a href="#" class="calendar__prev"></a>
+							<a href="#" class="calendar__next"></a>
+						</div>
+						<ul class="dayofweek">
+							<li>Пн</li><li>Вт</li><li>Ср</li><li>Чт</li>
+							<li>Пт</li><li>Сб</li><li>Вс</li>						
+						</ul>							
+						<div class="days">
+							<ul>
+								<li><a href="#" class="is-othermonth">26</a></li><li><a href="#" class="is-othermonth">27</a></li><li><a href="#" class="is-othermonth">28</a></li><li><a href="#" class="is-othermonth">29</a></li><li><a href="#" class="is-othermonth">30</a></li><li><a href="#" class="is-othermonth">31</a></li><li><a href="#">1</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#" class="is-active is-label-white">6</a></li><li><a href="#">7</a></li><li><a href="#">8</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">9</a></li><li><a href="#">10</a></li><li><a href="#">11</a></li><li><a href="#">12</a></li><li><a href="#">13</a></li><li><a href="#">14</a></li><li><a href="#">15</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">16</a></li><li><a href="#">17</a></li><li><a href="#">18</a></li><li><a href="#">19</a></li><li><a href="#">20</a></li><li><a href="#">21</a></li><li><a href="#">22</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">23</a></li><li><a href="#">24</a></li><li><a href="#" class="is-label">25</a></li><li><a href="#">26</a></li><li><a href="#">27</a></li><li><a href="#">28</a></li><li><a href="#">29</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">30</a></li><li><a href="#" class="is-othermonth">1</a></li><li><a href="#" class="is-othermonth">2</a></li><li><a href="#" class="is-othermonth">3</a></li><li><a href="#" class="is-othermonth">4</a></li><li><a href="#" class="is-othermonth">5</a></li><li><a href="#" class="is-othermonth">6</a></li>
+							</ul>
+						</div>							
+					</div>
+				</div>
+				<!-- END calendar -->
+			</div>
 
 				<div class="count">
 					2 чел.
@@ -70,29 +131,904 @@
 					<li><a href="#" class="clock__next">&nbsp;</a></li>
 				</ul>
 
-				<div class="guest">
-					<div class="guest__name">
-						<input type="text" name="" id="" placeholder="Как Вас зовут?">
-					</div>				
-					<div class="guest__phone">
-						<input type="text" name="" id="" placeholder="Ваш моб. телефон">
+				<div class="guest">					
+					<div class="field-item">
+						<input type="text" name="" id="guest__name" placeholder="Как Вас зовут?" required>
+						<label class="labelname" for="guest__name"></label>
+						<span class="input-ok"></span>
 					</div>
-					<div class="guest__wish">
-						<textarea name="" id="" cols="30" rows="3" placeholder="Ваши пожелания к брони"></textarea>
-						<a href="#"></a>
-					</div>				
+					<div class="field-item">					
+						<input type="text" name="" id="guest__phone" placeholder="Ваш моб. телефон" required>
+						<label class="labelphone" for="guest__phone"></label>
+						<span class="input-ok"></span>
+					</div>
+					
+					<div class="field-item">					
+						<textarea name="" id="guest__wish" cols="30" rows="3" placeholder="Ваши пожелания к брони"></textarea>
+						<a href="#" class="icon-list"></a>
+
+						<div class="wish">
+							<span>Частые пожелания:</span>
+							<ul>
+								<li><a href="#">По возможности у окна</a></li>
+								<li><a href="#">Желательно с диванчиками</a></li>
+								<li><a href="#">Столик в зале Золотой</a></li>
+								<li><a href="#">Нужны детские стульчики</a></li>
+							</ul>
+						</div>
+					</div>
+					
 				</div>
 
 				<div class="oferta">
 					Бронируя столики, вы соглашаетесь с условиями <a href="#">оферты</a>
 				</div>
-
 				<a href="#" class="reservation">Забронировать</a>
 			</div>
 			
 		</div>
 		<!-- END ordertable__rightcol -->
 	</div>
+	<!-- END ordertable -->
+
+	<br /><br />
+
+	<!-- BEGIN ordertable -->
+	<div class="ordertable">
+		<!-- BEGIN ordertable__leftcol -->
+		<div class="ordertable__leftcol">
+			<div class="ordertable__info">
+				<div class="name">
+					Китайская грамота
+				</div>
+				<p class="address">
+					Ресторан китайской кухни<br />Смоленская пл., д. 3
+				</p>
+			</div>
+			
+			<div class="ordertable__top30">
+				ТОП 30 Gettable
+			</div>
+
+			<div class="ordertable__bonus">
+				<span>+167 баллов</span>
+				<p>
+					будет зачислено<br />за это бронирование
+				</p>
+			</div>
+
+			<div class="ordertable__metadata">
+				<div class="site">
+					Gettable
+				</div>
+				<div class="phone">
+					Тел.: 8 495 255-11-33
+				</div>				
+				<a href="" class="howitsmade">Как это работает?</a>
+			</div>
+		</div>
+		<!-- END ordertable__leftcol -->
+
+		<!-- BEGIN ordertable__rightcol -->
+		<div class="ordertable__rightcol">
+			<a href="#" class="close"></a>
+			<div class="caption">
+				Бесплатный заказ столика:
+			</div>
+
+			<div class="order">
+				<div class="date">
+				<span class="date__selected">Понедельник, 20 сент.</span>
+				<a href="#" class="icon-calendar"></a>
+
+				<!-- BEGIN calendar -->
+				<div class="calendar">
+					<div class="calendar__inner">
+						<div class="calendar__date">						
+							<span class="month">Ноябрь</span>
+							<span class="year">2014</span>							
+							<a href="#" class="calendar__prev"></a>
+							<a href="#" class="calendar__next"></a>
+						</div>
+						<ul class="dayofweek">
+							<li>Пн</li><li>Вт</li><li>Ср</li><li>Чт</li>
+							<li>Пт</li><li>Сб</li><li>Вс</li>						
+						</ul>							
+						<div class="days">
+							<ul>
+								<li><a href="#" class="is-othermonth">26</a></li><li><a href="#" class="is-othermonth">27</a></li><li><a href="#" class="is-othermonth">28</a></li><li><a href="#" class="is-othermonth">29</a></li><li><a href="#" class="is-othermonth">30</a></li><li><a href="#" class="is-othermonth">31</a></li><li><a href="#">1</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#" class="is-active is-label-white">6</a></li><li><a href="#">7</a></li><li><a href="#">8</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">9</a></li><li><a href="#">10</a></li><li><a href="#">11</a></li><li><a href="#">12</a></li><li><a href="#">13</a></li><li><a href="#">14</a></li><li><a href="#">15</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">16</a></li><li><a href="#">17</a></li><li><a href="#">18</a></li><li><a href="#">19</a></li><li><a href="#">20</a></li><li><a href="#">21</a></li><li><a href="#">22</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">23</a></li><li><a href="#">24</a></li><li><a href="#" class="is-label">25</a></li><li><a href="#">26</a></li><li><a href="#">27</a></li><li><a href="#">28</a></li><li><a href="#">29</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">30</a></li><li><a href="#" class="is-othermonth">1</a></li><li><a href="#" class="is-othermonth">2</a></li><li><a href="#" class="is-othermonth">3</a></li><li><a href="#" class="is-othermonth">4</a></li><li><a href="#" class="is-othermonth">5</a></li><li><a href="#" class="is-othermonth">6</a></li>
+							</ul>
+						</div>							
+					</div>
+				</div>
+				<!-- END calendar -->
+			</div>
+
+				<div class="count">
+					2 чел.
+					<div class="widget-counter">
+						<a href="#" class="counter-up"></a>
+						<a href="#" class="counter-down"></a>
+					</div>
+				</div>
+
+				<ul class="selecttime">
+					<li><a href="#" class="clock__prev">&nbsp;</a></li>
+					<li><a href="#">15:30</a></li>
+					<li><a href="#">16:00</a></li>				
+					<li><a href="#">16:30</a></li>
+					<li><a href="#">17:00</a></li>
+					<li><a href="#">17:30</a></li>
+					<li><a href="#">18:00</a></li>
+					<li><a href="#">18:30</a></li>
+					<li><a href="#">19:00</a></li>				
+					<li><a href="#" class="is-active">19:30</a></li>
+					<li><a href="#">20:00</a></li>
+					<li><a href="#">20:30</a></li>				
+					<li><a href="#">21:00</a></li>					
+					<li><a href="#" class="clock__next">&nbsp;</a></li>
+				</ul>
+
+				<div class="guest">					
+					<div class="field-item field-item-ok">
+						<input type="text" name="" id="guest__name" placeholder="Как Вас зовут?" value="Егор" required>
+						<label class="labelname" for="guest__name"></label>
+						<span class="input-ok"></span>
+					</div>
+					<div class="field-item field-item-ok">					
+						<input type="text" name="" id="guest__phone" placeholder="Ваш моб. телефон" value="+7 (916) 066-05-05" required>
+						<label class="labelphone" for="guest__phone"></label>
+						<span class="input-ok"></span>
+					</div>
+										
+					<div class="field-item field-item-ok">
+						<textarea name="" id="guest__wish" cols="30" rows="3" placeholder="Ваши пожелания к брони">Столик в зале Золотой</textarea>
+						<a href="#" class="icon-list"></a>
+
+						<div class="wish">
+							<span>Частые пожелания:</span>
+							<ul>
+								<li><a href="#">По возможности у окна</a></li>
+								<li><a href="#">Желательно с диванчиками</a></li>
+								<li><a href="#" class="is-active">Столик в зале Золотой</a></li>
+								<li><a href="#">Нужны детские стульчики</a></li>
+							</ul>
+						</div>
+					</div>					
+				</div>
+
+				<div class="oferta">
+					Бронируя столики, вы соглашаетесь с условиями <a href="#">оферты</a>
+				</div>
+				<a href="#" class="reservation">Забронировать</a>
+			</div>
+			
+		</div>
+		<!-- END ordertable__rightcol -->
+	</div>
+	<!-- END ordertable -->
+
+	<br /><br />
+
+	<!-- BEGIN ordertable -->
+	<div class="ordertable">
+		<!-- BEGIN ordertable__leftcol -->
+		<div class="ordertable__leftcol">
+			<div class="ordertable__info">
+				<div class="name">
+					Китайская грамота
+				</div>
+				<p class="address">
+					Ресторан китайской кухни<br />Смоленская пл., д. 3
+				</p>
+			</div>
+			
+			<div class="ordertable__metadata">
+				<div class="site">
+					Gettable
+				</div>
+				<div class="phone">
+					Тел.: 8 495 255-11-33
+				</div>				
+				<a href="" class="howitsmade">Как это работает?</a>
+			</div>
+		</div>
+		<!-- END ordertable__leftcol -->
+
+		<!-- BEGIN ordertable__rightcol -->
+		<div class="ordertable__rightcol">
+			<a href="#" class="close"></a>
+			<div class="caption">
+				Бесплатный заказ столика:
+			</div>
+
+			<div class="order">
+				<div class="order__check">
+					Понедельник, 20 сент., 2 человека, 18:30
+					<a href="#" class="order__edit"></a>
+				</div>
+
+				<div class="guest">					
+					<div class="field-item">
+						<input type="text" name="" id="guest__name" placeholder="Как Вас зовут?" value="" required>
+						<label class="labelname" for="guest__name"></label>
+						<span class="input-ok"></span>
+					</div>
+					<div class="field-item">					
+						<input type="text" name="" id="guest__phone" placeholder="Ваш моб. телефон" value="" required>
+						<label class="labelphone" for="guest__phone"></label>
+						<span class="input-ok"></span>
+					</div>
+										
+					<div class="field-item">
+						<textarea name="" id="guest__wish" cols="30" rows="3" placeholder="Ваши пожелания к брони"></textarea>
+						<a href="#" class="icon-list"></a>
+
+						<div class="wish">
+							<span>Частые пожелания:</span>
+							<ul>
+								<li><a href="#">По возможности у окна</a></li>
+								<li><a href="#">Желательно с диванчиками</a></li>
+								<li><a href="#">Столик в зале Золотой</a></li>
+								<li><a href="#">Нужны детские стульчики</a></li>
+							</ul>
+						</div>
+					</div>					
+				</div>
+
+				<div class="oferta">
+					Бронируя столики, вы соглашаетесь с условиями <a href="#">оферты</a>
+				</div>
+				<a href="#" class="reservation">Забронировать</a>
+			</div>
+			
+		</div>
+		<!-- END ordertable__rightcol -->
+	</div>
+	<!-- END ordertable -->
+
+	<br /><br />
+
+	<!-- BEGIN ordertable -->	
+	<div class="ordertable">
+		<!-- BEGIN ordertable__leftcol -->
+		<div class="ordertable__leftcol">
+			<div class="ordertable__info">
+				<div class="name">
+					Китайская грамота
+				</div>
+				<p class="address">
+					Ресторан китайской кухни<br />Смоленская пл., д. 3
+				</p>
+			</div>
+			
+			<div class="ordertable__metadata">
+				<div class="site">
+					Gettable
+				</div>
+				<div class="phone">
+					Тел.: 8 495 255-11-33
+				</div>				
+				<a href="" class="howitsmade">Как это работает?</a>
+			</div>
+		</div>
+		<!-- END ordertable__leftcol -->
+
+		<!-- BEGIN ordertable__rightcol -->
+		<div class="ordertable__rightcol">
+			<a href="#" class="close"></a>
+			<div class="caption">
+				Бесплатный заказ столика:
+			</div>
+
+			<div class="order">
+				<div class="date">
+				<span class="date__selected">Понедельник, 20 сент.</span>
+				<a href="#" class="icon-calendar"></a>
+
+				<!-- BEGIN calendar -->
+				<div class="calendar">
+					<div class="calendar__inner">
+						<div class="calendar__date">						
+							<span class="month">Ноябрь</span>
+							<span class="year">2014</span>							
+							<a href="#" class="calendar__prev"></a>
+							<a href="#" class="calendar__next"></a>
+						</div>
+						<ul class="dayofweek">
+							<li>Пн</li><li>Вт</li><li>Ср</li><li>Чт</li>
+							<li>Пт</li><li>Сб</li><li>Вс</li>						
+						</ul>							
+						<div class="days">
+							<ul>
+								<li><a href="#" class="is-othermonth">26</a></li><li><a href="#" class="is-othermonth">27</a></li><li><a href="#" class="is-othermonth">28</a></li><li><a href="#" class="is-othermonth">29</a></li><li><a href="#" class="is-othermonth">30</a></li><li><a href="#" class="is-othermonth">31</a></li><li><a href="#">1</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#" class="is-active is-label-white">6</a></li><li><a href="#">7</a></li><li><a href="#">8</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">9</a></li><li><a href="#">10</a></li><li><a href="#">11</a></li><li><a href="#">12</a></li><li><a href="#">13</a></li><li><a href="#">14</a></li><li><a href="#">15</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">16</a></li><li><a href="#">17</a></li><li><a href="#">18</a></li><li><a href="#">19</a></li><li><a href="#">20</a></li><li><a href="#">21</a></li><li><a href="#">22</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">23</a></li><li><a href="#">24</a></li><li><a href="#" class="is-label">25</a></li><li><a href="#">26</a></li><li><a href="#">27</a></li><li><a href="#">28</a></li><li><a href="#">29</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">30</a></li><li><a href="#" class="is-othermonth">1</a></li><li><a href="#" class="is-othermonth">2</a></li><li><a href="#" class="is-othermonth">3</a></li><li><a href="#" class="is-othermonth">4</a></li><li><a href="#" class="is-othermonth">5</a></li><li><a href="#" class="is-othermonth">6</a></li>
+							</ul>
+						</div>							
+					</div>
+				</div>
+				<!-- END calendar -->
+			</div>
+
+				<div class="count">
+					2 чел.
+					<div class="widget-counter">
+						<a href="#" class="counter-up"></a>
+						<a href="#" class="counter-down"></a>
+					</div>
+				</div>
+
+				<ul class="selecttime">
+					<li><a href="#" class="clock__prev">&nbsp;</a></li>
+					<li><a href="#">15:30</a></li>
+					<li><a href="#">16:00</a></li>				
+					<li><a href="#">16:30</a></li>
+					<li><a href="#">17:00</a></li>
+					<li><a href="#">17:30</a></li>
+					<li><a href="#">18:00</a></li>
+					<li><a href="#">18:30</a></li>
+					<li><a href="#">19:00</a></li>				
+					<li><a href="#" class="is-active">19:30</a></li>
+					<li><a href="#">20:00</a></li>
+					<li><a href="#">20:30</a></li>				
+					<li><a href="#">21:00</a></li>					
+					<li><a href="#" class="clock__next">&nbsp;</a></li>
+				</ul>
+
+				<div class="guest">					
+					<div class="field-item">
+						<input type="text" name="" id="guest__name" placeholder="Как Вас зовут?" required>
+						<label class="labelname" for="guest__name"></label>
+						<span class="input-ok"></span>
+					</div>
+					<div class="field-item">					
+						<input type="text" name="" id="guest__phone" placeholder="Ваш моб. телефон" required>
+						<label class="labelphone" for="guest__phone"></label>
+						<span class="input-ok"></span>
+					</div>
+					
+					<div class="field-item">					
+						<textarea name="" id="guest__wish" cols="30" rows="3" placeholder="Ваши пожелания к брони"></textarea>
+						<a href="#" class="icon-list"></a>
+
+						<div class="wish">
+							<span>Частые пожелания:</span>
+							<ul>
+								<li><a href="#">По возможности у окна</a></li>
+								<li><a href="#">Желательно с диванчиками</a></li>
+								<li><a href="#">Столик в зале Золотой</a></li>
+								<li><a href="#">Нужны детские стульчики</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<a href="#" class="confirm">Подтвердить</a>					
+				</div>
+				
+			</div>
+			
+		</div>
+		<!-- END ordertable__rightcol -->
+	</div>
+	<!-- END ordertable -->
+
+	<br /><br />
+
+		<!-- BEGIN ordertable -->	
+	<div class="ordertable">
+		<!-- BEGIN ordertable__leftcol -->
+		<div class="ordertable__leftcol">
+			<div class="ordertable__info">
+				<div class="name">
+					Китайская грамота
+				</div>
+				<p class="address">
+					Ресторан китайской кухни<br />Смоленская пл., д. 3
+				</p>
+			</div>
+			
+			<div class="ordertable__metadata">
+				<div class="site">
+					Gettable
+				</div>
+				<div class="phone">
+					Тел.: 8 495 255-11-33
+				</div>				
+				<a href="" class="howitsmade">Как это работает?</a>
+			</div>
+		</div>
+		<!-- END ordertable__leftcol -->
+
+		<!-- BEGIN ordertable__rightcol -->
+		<div class="ordertable__rightcol">
+			<a href="#" class="close"></a>
+			<div class="caption">
+				Бесплатный заказ столика:
+			</div>
+
+			<div class="order">
+				<div class="date">
+				<span class="date__selected">Понедельник, 20 сент.</span>
+				<a href="#" class="icon-calendar"></a>
+
+				<!-- BEGIN calendar -->
+				<div class="calendar">
+					<div class="calendar__inner">
+						<div class="calendar__date">						
+							<span class="month">Ноябрь</span>
+							<span class="year">2014</span>							
+							<a href="#" class="calendar__prev"></a>
+							<a href="#" class="calendar__next"></a>
+						</div>
+						<ul class="dayofweek">
+							<li>Пн</li><li>Вт</li><li>Ср</li><li>Чт</li>
+							<li>Пт</li><li>Сб</li><li>Вс</li>						
+						</ul>							
+						<div class="days">
+							<ul>
+								<li><a href="#" class="is-othermonth">26</a></li><li><a href="#" class="is-othermonth">27</a></li><li><a href="#" class="is-othermonth">28</a></li><li><a href="#" class="is-othermonth">29</a></li><li><a href="#" class="is-othermonth">30</a></li><li><a href="#" class="is-othermonth">31</a></li><li><a href="#">1</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#" class="is-active is-label-white">6</a></li><li><a href="#">7</a></li><li><a href="#">8</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">9</a></li><li><a href="#">10</a></li><li><a href="#">11</a></li><li><a href="#">12</a></li><li><a href="#">13</a></li><li><a href="#">14</a></li><li><a href="#">15</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">16</a></li><li><a href="#">17</a></li><li><a href="#">18</a></li><li><a href="#">19</a></li><li><a href="#">20</a></li><li><a href="#">21</a></li><li><a href="#">22</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">23</a></li><li><a href="#">24</a></li><li><a href="#" class="is-label">25</a></li><li><a href="#">26</a></li><li><a href="#">27</a></li><li><a href="#">28</a></li><li><a href="#">29</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">30</a></li><li><a href="#" class="is-othermonth">1</a></li><li><a href="#" class="is-othermonth">2</a></li><li><a href="#" class="is-othermonth">3</a></li><li><a href="#" class="is-othermonth">4</a></li><li><a href="#" class="is-othermonth">5</a></li><li><a href="#" class="is-othermonth">6</a></li>
+							</ul>
+						</div>							
+					</div>
+				</div>
+				<!-- END calendar -->
+			</div>
+
+				<div class="count">
+					2 чел.
+					<div class="widget-counter">
+						<a href="#" class="counter-up"></a>
+						<a href="#" class="counter-down"></a>
+					</div>
+				</div>
+
+				<ul class="selecttime">
+					<li><a href="#" class="clock__prev">&nbsp;</a></li>
+					<li><a href="#">15:30</a></li>
+					<li><a href="#">16:00</a></li>				
+					<li><a href="#">16:30</a></li>
+					<li><a href="#">17:00</a></li>
+					<li><a href="#">17:30</a></li>
+					<li><a href="#">18:00</a></li>
+					<li><a href="#">18:30</a></li>
+					<li><a href="#">19:00</a></li>				
+					<li><a href="#" class="is-active">19:30</a></li>
+					<li><a href="#">20:00</a></li>
+					<li><a href="#">20:30</a></li>				
+					<li><a href="#">21:00</a></li>					
+					<li><a href="#" class="clock__next">&nbsp;</a></li>
+				</ul>
+
+				<div class="guest">					
+					<div class="field-item">
+						<input type="text" name="" id="guest__name" placeholder="Как Вас зовут?" required>
+						<label class="labelname" for="guest__name"></label>
+						<span class="input-ok"></span>
+					</div>
+					<div class="field-item">					
+						<input type="text" name="" id="guest__smskey" placeholder="Код из СМС" required>
+						<label class="labelsmskey" for="guest__smskey"></label>
+						<span class="input-ok"></span>
+						<span class="loader"></span>
+					</div>
+
+					<p class="wesendcode">
+						Мы пришлем код по СМС за пару минут. Это нужно чтобы подтвердить ваш телефон и записать его в книгу резервов.						
+					</p>
+					
+					<div class="field-item">					
+						<textarea name="" id="guest__wish" cols="30" rows="3" placeholder="Ваши пожелания к брони"></textarea>
+						<a href="#" class="icon-list"></a>
+
+						<div class="wish">
+							<span>Частые пожелания:</span>
+							<ul>
+								<li><a href="#">По возможности у окна</a></li>
+								<li><a href="#">Желательно с диванчиками</a></li>
+								<li><a href="#">Столик в зале Золотой</a></li>
+								<li><a href="#">Нужны детские стульчики</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<a href="#" class="getsmscode">Получить код</a>					
+				</div>				
+			</div>
+			
+		</div>
+		<!-- END ordertable__rightcol -->
+	</div>
+	<!-- END ordertable -->
+
+	<br /><br />
+
+	<!-- BEGIN ordertable -->	
+	<div class="ordertable">
+		<!-- BEGIN ordertable__leftcol -->
+		<div class="ordertable__leftcol">
+			<div class="ordertable__info">
+				<div class="name">
+					Китайская грамота
+				</div>
+				<p class="address">
+					Ресторан китайской кухни<br />Смоленская пл., д. 3
+				</p>
+			</div>
+			
+			<div class="ordertable__metadata">
+				<div class="site">
+					Gettable
+				</div>
+				<div class="phone">
+					Тел.: 8 495 255-11-33
+				</div>				
+				<a href="" class="howitsmade">Как это работает?</a>
+			</div>
+		</div>
+		<!-- END ordertable__leftcol -->
+
+		<!-- BEGIN ordertable__rightcol -->
+		<div class="ordertable__rightcol">
+			<a href="#" class="close"></a>
+			<div class="caption">
+				Бесплатный заказ столика:
+			</div>
+
+			<div class="order">
+				<div class="date">
+				<span class="date__selected">Понедельник, 20 сент.</span>
+				<a href="#" class="icon-calendar"></a>
+
+				<!-- BEGIN calendar -->
+				<div class="calendar">
+					<div class="calendar__inner">
+						<div class="calendar__date">						
+							<span class="month">Ноябрь</span>
+							<span class="year">2014</span>							
+							<a href="#" class="calendar__prev"></a>
+							<a href="#" class="calendar__next"></a>
+						</div>
+						<ul class="dayofweek">
+							<li>Пн</li><li>Вт</li><li>Ср</li><li>Чт</li>
+							<li>Пт</li><li>Сб</li><li>Вс</li>						
+						</ul>							
+						<div class="days">
+							<ul>
+								<li><a href="#" class="is-othermonth">26</a></li><li><a href="#" class="is-othermonth">27</a></li><li><a href="#" class="is-othermonth">28</a></li><li><a href="#" class="is-othermonth">29</a></li><li><a href="#" class="is-othermonth">30</a></li><li><a href="#" class="is-othermonth">31</a></li><li><a href="#">1</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#" class="is-active is-label-white">6</a></li><li><a href="#">7</a></li><li><a href="#">8</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">9</a></li><li><a href="#">10</a></li><li><a href="#">11</a></li><li><a href="#">12</a></li><li><a href="#">13</a></li><li><a href="#">14</a></li><li><a href="#">15</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">16</a></li><li><a href="#">17</a></li><li><a href="#">18</a></li><li><a href="#">19</a></li><li><a href="#">20</a></li><li><a href="#">21</a></li><li><a href="#">22</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">23</a></li><li><a href="#">24</a></li><li><a href="#" class="is-label">25</a></li><li><a href="#">26</a></li><li><a href="#">27</a></li><li><a href="#">28</a></li><li><a href="#">29</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">30</a></li><li><a href="#" class="is-othermonth">1</a></li><li><a href="#" class="is-othermonth">2</a></li><li><a href="#" class="is-othermonth">3</a></li><li><a href="#" class="is-othermonth">4</a></li><li><a href="#" class="is-othermonth">5</a></li><li><a href="#" class="is-othermonth">6</a></li>
+							</ul>
+						</div>							
+					</div>
+				</div>
+				<!-- END calendar -->
+			</div>
+
+				<div class="count">
+					2 чел.
+					<div class="widget-counter">
+						<a href="#" class="counter-up"></a>
+						<a href="#" class="counter-down"></a>
+					</div>
+				</div>
+
+				<ul class="selecttime">
+					<li><a href="#" class="clock__prev">&nbsp;</a></li>
+					<li><a href="#">15:30</a></li>
+					<li><a href="#">16:00</a></li>				
+					<li><a href="#">16:30</a></li>
+					<li><a href="#">17:00</a></li>
+					<li><a href="#">17:30</a></li>
+					<li><a href="#">18:00</a></li>
+					<li><a href="#">18:30</a></li>
+					<li><a href="#">19:00</a></li>				
+					<li><a href="#" class="is-active">19:30</a></li>
+					<li><a href="#">20:00</a></li>
+					<li><a href="#">20:30</a></li>				
+					<li><a href="#">21:00</a></li>					
+					<li><a href="#" class="clock__next">&nbsp;</a></li>
+				</ul>
+
+				<div class="guest">					
+					<div class="field-item">
+						<input type="text" name="" id="guest__name" placeholder="Как Вас зовут?" required>
+						<label class="labelname" for="guest__name"></label>
+						<span class="input-ok"></span>
+					</div>
+					<div class="field-item">					
+						<input type="text" name="" id="guest__smskey" placeholder="Код из СМС" required>
+						<label class="labelsmskey" for="guest__smskey"></label>
+						<span class="input-ok"></span>
+					</div>
+
+					<p class="wesendcode">
+						Мы пришлем код по СМС за пару минут. Это нужно чтобы подтвердить ваш телефон и записать его в книгу резервов.						
+					</p>
+					
+					<div class="field-item">					
+						<textarea name="" id="guest__wish" cols="30" rows="3" placeholder="Ваши пожелания к брони"></textarea>
+						<a href="#" class="icon-list"></a>
+
+						<div class="wish">
+							<span>Частые пожелания:</span>
+							<ul>
+								<li><a href="#">По возможности у окна</a></li>
+								<li><a href="#">Желательно с диванчиками</a></li>
+								<li><a href="#">Столик в зале Золотой</a></li>
+								<li><a href="#">Нужны детские стульчики</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<a href="#" class="entersmscode">Ввести код</a>					
+				</div>
+				
+			</div>
+			
+		</div>
+		<!-- END ordertable__rightcol -->
+	</div>
+	<!-- END ordertable -->
+
+	<br /><br />
+
+	<!-- BEGIN ordertable -->	
+	<div class="ordertable">
+		<!-- BEGIN ordertable__leftcol -->
+		<div class="ordertable__leftcol">
+			<div class="ordertable__info">
+				<div class="name">
+					Китайская грамота
+				</div>
+				<p class="address">
+					Ресторан китайской кухни<br />Смоленская пл., д. 3
+				</p>
+			</div>
+			
+			<div class="ordertable__metadata">
+				<div class="site">
+					Gettable
+				</div>
+				<div class="phone">
+					Тел.: 8 495 255-11-33
+				</div>				
+				<a href="" class="howitsmade">Как это работает?</a>
+			</div>
+		</div>
+		<!-- END ordertable__leftcol -->
+
+		<!-- BEGIN ordertable__rightcol -->
+		<div class="ordertable__rightcol">
+			<a href="#" class="close"></a>
+			<div class="caption">
+				Бесплатный заказ столика:
+			</div>
+
+			<div class="order">
+				<div class="date">
+				<span class="date__selected">Понедельник, 20 сент.</span>
+				<a href="#" class="icon-calendar"></a>
+
+				<!-- BEGIN calendar -->
+				<div class="calendar">
+					<div class="calendar__inner">
+						<div class="calendar__date">						
+							<span class="month">Ноябрь</span>
+							<span class="year">2014</span>							
+							<a href="#" class="calendar__prev"></a>
+							<a href="#" class="calendar__next"></a>
+						</div>
+						<ul class="dayofweek">
+							<li>Пн</li><li>Вт</li><li>Ср</li><li>Чт</li>
+							<li>Пт</li><li>Сб</li><li>Вс</li>						
+						</ul>							
+						<div class="days">
+							<ul>
+								<li><a href="#" class="is-othermonth">26</a></li><li><a href="#" class="is-othermonth">27</a></li><li><a href="#" class="is-othermonth">28</a></li><li><a href="#" class="is-othermonth">29</a></li><li><a href="#" class="is-othermonth">30</a></li><li><a href="#" class="is-othermonth">31</a></li><li><a href="#">1</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#" class="is-active is-label-white">6</a></li><li><a href="#">7</a></li><li><a href="#">8</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">9</a></li><li><a href="#">10</a></li><li><a href="#">11</a></li><li><a href="#">12</a></li><li><a href="#">13</a></li><li><a href="#">14</a></li><li><a href="#">15</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">16</a></li><li><a href="#">17</a></li><li><a href="#">18</a></li><li><a href="#">19</a></li><li><a href="#">20</a></li><li><a href="#">21</a></li><li><a href="#">22</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">23</a></li><li><a href="#">24</a></li><li><a href="#" class="is-label">25</a></li><li><a href="#">26</a></li><li><a href="#">27</a></li><li><a href="#">28</a></li><li><a href="#">29</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">30</a></li><li><a href="#" class="is-othermonth">1</a></li><li><a href="#" class="is-othermonth">2</a></li><li><a href="#" class="is-othermonth">3</a></li><li><a href="#" class="is-othermonth">4</a></li><li><a href="#" class="is-othermonth">5</a></li><li><a href="#" class="is-othermonth">6</a></li>
+							</ul>
+						</div>							
+					</div>
+				</div>
+				<!-- END calendar -->
+			</div>
+
+				<div class="count">
+					2 чел.
+					<div class="widget-counter">
+						<a href="#" class="counter-up"></a>
+						<a href="#" class="counter-down"></a>
+					</div>
+				</div>
+
+				<ul class="selecttime">
+					<li><a href="#" class="clock__prev">&nbsp;</a></li>
+					<li><a href="#">15:30</a></li>
+					<li><a href="#">16:00</a></li>				
+					<li><a href="#">16:30</a></li>
+					<li><a href="#">17:00</a></li>
+					<li><a href="#">17:30</a></li>
+					<li><a href="#">18:00</a></li>
+					<li><a href="#">18:30</a></li>
+					<li><a href="#">19:00</a></li>				
+					<li><a href="#" class="is-active">19:30</a></li>
+					<li><a href="#">20:00</a></li>
+					<li><a href="#">20:30</a></li>				
+					<li><a href="#">21:00</a></li>					
+					<li><a href="#" class="clock__next">&nbsp;</a></li>
+				</ul>
+
+				<div class="guest">					
+					<div class="field-item border-red">
+						<input type="text" name="" id="guest__name" placeholder="" required>
+						<label class="labelname" for="guest__name"></label>
+						<span class="input-ok"></span>
+					</div>
+					<div class="field-item border-red">					
+						<input type="text" name="" id="guest__phone" placeholder="" required>
+						<label class="labelphone" for="guest__phone"></label>
+						<span class="input-ok"></span>
+					</div>
+					
+					<div class="field-item">					
+						<textarea name="" id="guest__wish" cols="30" rows="3" placeholder="Ваши пожелания к брони"></textarea>
+						<a href="#" class="icon-list"></a>
+
+						<div class="wish">
+							<span>Частые пожелания:</span>
+							<ul>
+								<li><a href="#">По возможности у окна</a></li>
+								<li><a href="#">Желательно с диванчиками</a></li>
+								<li><a href="#">Столик в зале Золотой</a></li>
+								<li><a href="#">Нужны детские стульчики</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<a href="#" class="confirm">Подтвердить</a>					
+				</div>
+				
+			</div>
+			
+		</div>
+		<!-- END ordertable__rightcol -->
+	</div>
+	<!-- END ordertable -->
+
+	<br /><br />
+
+	<!-- BEGIN ordertable -->	
+	<div class="ordertable">
+		<!-- BEGIN ordertable__leftcol -->
+		<div class="ordertable__leftcol">
+			<div class="ordertable__info">
+				<div class="name">
+					Китайская грамота
+				</div>
+				<p class="address">
+					Ресторан китайской кухни<br />Смоленская пл., д. 3
+				</p>
+			</div>
+			
+			<div class="ordertable__metadata">
+				<div class="site">
+					Gettable
+				</div>
+				<div class="phone">
+					Тел.: 8 495 255-11-33
+				</div>				
+				<a href="" class="howitsmade">Как это работает?</a>
+			</div>
+		</div>
+		<!-- END ordertable__leftcol -->
+
+		<!-- BEGIN ordertable__rightcol -->
+		<div class="ordertable__rightcol">
+			<a href="#" class="close"></a>
+			<div class="caption">
+				Как это работает? Все просто!
+			</div>
+
+			<div class="agreement">
+				<div class="agreement__item">
+					<span class="item">1. Вы выбираете дату, врем и количество человек</span>
+					<p class="item__description">
+						Мы найдем для вас лучший столик в ресторане, по вашим параметрам, мы знаем все о ресторанах.						
+					</p>
+
+					<div class="agreement__order">
+						<span class="agreement__date">15 окт</span>
+						<span class="agreement__time">20:30</span>
+						<span class="agreement__count">2</span>					
+					</div>
+				</div>
+				<div class="agreement__item">
+					<span class="item">2. Мы бесплатно забронируем для вас лучший столик</span>
+					<p class="item__description">
+						А еще выделим вам бонусных балов, которые вы сможете использовать потом в других ресторанах и клубах.
+					</p>					
+				</div>
+			</div>
+
+			<a href="#" class="agreement__close">Закрыть соглашение</a>
+		</div>
+		<!-- END ordertable__rightcol -->
+	</div>
+	<!-- END ordertable -->
+
+	<br /><br />
+
 </div>
 <!-- END out-->
 <!-- load scripts -->
