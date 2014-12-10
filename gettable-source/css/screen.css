@@ -1,0 +1,59 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+body, html { height: 100%; }
+
+img, fieldset, a img { border: none; }
+
+input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; border-radius: 0; }
+
+input[type="submit"], button { cursor: pointer; }
+input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
+
+textarea { overflow: auto; }
+
+input, button { margin: 0; padding: 0; border: 0; }
+
+div, input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
+
+ul, ol { list-style-type: none; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
+table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+
+.l { *zoom: 1; }
+.l:after { content: " "; display: table; clear: both; }
+.l .l-col1 { float: left; width: 20%; }
+.l .l-col2 { float: right; width: 70%; }
+
+body { height: 100%; background: #356dad; }
+
+@font-face { font-family: "OpenSans Light"; src: url("fonts/OpenSansLight.eot"); src: url("fonts/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansLight.woff2") format("woff2"), url("fonts/OpenSansLight.woff") format("woff"), url("fonts/OpenSansLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "OpenSans Semibold"; src: url("fonts/OpenSansSemiBold.eot"); src: url("fonts/OpenSansSemiBold.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansSemiBold.woff2") format("woff2"), url("fonts/OpenSansSemiBold.woff") format("woff"), url("fonts/OpenSansSemiBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
+
+.out { min-height: 100%; background: url(../img/background-source.jpg) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-position: top center; max-width: 640px; text-align: center; font-size: 0; height: auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 20px; }
+.out:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+
+.source { display: inline-block; vertical-align: middle; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; position: relative; border: 3px solid rgba(38, 89, 157, 0.39); overflow: hidden; }
+
+.inner { padding: 22px 15px 25px; background: rgba(255, 255, 255, 0.85); }
+.inner img { margin-bottom: 14px; display: inline-block; width: 65px; }
+
+h1 { font-family: "OpenSans Light", Arial, sans-serif; font-size: 36px; line-height: 1; margin-bottom: 18px; }
+
+p { font-size: 18px; font-family: "OpenSans Light", Arial, sans-serif; margin-bottom: 22px; }
+
+h2 { font-family: "OpenSans Semibold", Arial, sans-serif; font-size: 24px; width: 80%; margin: 0 auto; }
+
+.btns { font-size: 0px; position: relative; }
+.btns:before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #caced3; z-index: 1; }
+
+.btn { display: inline-block; width: 50%; height: 62px; border-top: 1px solid #caced3; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; font-size: 0; font-family: "OpenSans Semibold", Arial, sans-serif; background: white; position: relative; }
+.btn:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.btn span { display: inline-block; vertical-align: middle; font-size: 20px; position: relative; }
+.btn_dark { color: #142e4a; }
+.btn_dark span { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=69); opacity: 0.69; }
+.btn_orange { color: #ff5a00; }
+.btn:active span { top: 1px; }
