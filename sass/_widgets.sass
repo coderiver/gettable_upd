@@ -279,7 +279,7 @@
 							font-size: 14px
 							color: #494949
 							background: #dcdcdc
-							border-radius: 4px
+							border-radius: 4px							
 
 						a:hover
 							background: #c4c4c4
@@ -457,7 +457,6 @@
 			position: absolute
 			bottom: 65px
 			left: 30px
-
 		
 
 	// Виджет "Общие сведения" //
@@ -501,8 +500,91 @@
 
 // Виджет заказ столика
 .outwidgets
-	width: 728px
-	margin: 0 auto
+	width: 100%	
+	background: rgba(0, 0, 0, 0.7)
+
+	.alert-close
+		+s(close_white)
+		display: block
+		position: absolute
+		top: 10px
+		right: 10px
+
+	.alert-close:hover
+		+s(close_dark)
+
+	.alert
+		width: 300px
+		margin: 0 auto
+		background: #0a0a0a
+		position: relative
+		text-align: center
+		padding: 20px 30px
+
+		.alert__leaving, .alert__error
+			+OpenSansSB
+			font-size: 30px
+			color: #858585
+			margin-top: 7px
+
+		p
+			+OpenSansL
+			font-size: 14px
+			color: #858585
+			margin-top: 6px
+			margin-bottom: 38px
+
+		.alert__aim			
+			+OpenSansL
+			font-size: 16px
+			color: #fff
+			border-bottom: 1px dashed #545454
+			line-height: 34px
+
+		a:hover
+			border-bottom: none
+			color: #ccc
+
+		.alert__phone
+			+OpenSansL
+			font-size: 14px
+			color: #858585
+			margin-top: 43px
+			margin-bottom: 3px
+
+		.alert__thankyou 
+			+OpenSansSB
+			color: #fff
+			font-size: 30px			
+			margin-top: 4px
+
+		.alert__white
+			+OpenSansL
+			color: #fff
+			font-size: 14px
+			margin-top: 10px
+
+		.ok
+			margin-top: 35px
+			margin-bottom: 10px
+
+			a
+				background: #8a8a8a
+				padding: 11px 40px				
+				+OpenSansSB
+				font-size: 16px
+				color: #fff
+
+			a:hover
+				background: #6a6a6a
+
+	.alert-small
+		width: 280px
+		padding: 20px 20px
+
+	.container
+		width: 728px
+		margin: 0 auto
 
 .ordertable			
 	display: table-row	
@@ -551,7 +633,11 @@
 				font-size: 12px
 				margin-top: 2px
 				border-bottom: 1px solid #cdcdcd
-				color: #818181				
+				color: #818181
+
+			.howitsmade:hover
+				border-bottom: none
+				color: #616161
 
 		.ordertable__special, .ordertable__veranda
 			+OpenSans			
@@ -562,6 +648,10 @@
 			a
 				border-bottom: 1px dashed #959595
 				color: #000
+
+			a:hover
+				border-bottom: none
+				color: #323232
 
 		.ordertable__special
 			display: block
@@ -737,13 +827,14 @@
 					a
 						display: block
 						width: 56px
-						height: 21px
-						padding-top: 7px
+						height: 22px
+						padding-top: 6px
 						+OpenSans
 						font-size: 12px
 						color: #494949
 						background: #f1f1f1
 						border-radius: 4px
+						line-height: normal
 
 					a:hover
 						background: #c4c4c4
@@ -781,6 +872,7 @@
 
 				.field-item
 					position: relative
+					font-size: 0px
 
 					input
 						border: 1px solid #c4c4c4
@@ -788,23 +880,20 @@
 						margin-bottom: 14px				
 						color: #8f8f8f
 						+OpenSans
-						font-size: 14px
-						padding-left: 38px
-						padding-right: 35px
-						width: 187px
-						height: 36px
-						line-height: 36px
+						font-size: 14px						
+						width: 187px						
+						padding: 9px 35px 9px 38px						
 
 					label
 						position: relative
-						cursor: text
+						cursor: text						
 
 					label:before
-						content: ' '
+						content: ''
 						border: none					
 						position: absolute
 						top: -2px
-						left: -255px					
+						left: -250px						
 
 					.labelname:before
 						+s(men)
@@ -833,7 +922,7 @@
 				.icon-list
 					+s(list)
 					position: absolute
-					bottom: 60px
+					bottom: 56px
 					right: 12px
 
 				.icon-list:hover + .wish
@@ -864,7 +953,7 @@
 
 				.wish
 					position: absolute
-					bottom: 73px
+					bottom: 69px
 					right: 2px
 					text-align: right
 					background: #f5f5f5
@@ -1071,3 +1160,139 @@
 
 		.agreement__close:hover
 			background: #3e6d41		
+
+		.details
+			border-bottom: 1px dashed #cccccc
+			margin-top: 30px
+			padding-bottom: 10px
+			padding-left: 55px
+			position: relative
+			+OpenSans
+			font-size: 14px
+			color: #000
+
+			p
+				margin-bottom: 15px
+
+			.good
+				+OpenSansSB
+				font-size: 18px
+				color: #000
+				margin-bottom: 15px
+
+		.details:before
+			content: ' '
+			+s(check_b)
+			position: absolute
+			top: -5px
+			left: 0px
+
+		.saveonmail
+			+OpenSans
+			margin-top: 22px
+
+			.saveonmail__caption
+				font-size: 18px
+
+			.mail
+				margin-top: 20px
+				margin-bottom: 45px
+				vertical-align: middle
+
+				.youemail
+					font-size: 14px
+					float: left
+					margin-top: 10px
+
+				input
+					border: 1px solid #c4c4c4
+					border-radius: 4px					
+					color: #8f8f8f			
+					font-size: 14px
+					padding-left: 10px
+					padding-right: 10px
+					width: 160px					
+					padding-top: 8px
+					padding-bottom: 9px
+					line-height: normal
+					margin-left: 20px
+					margin-right: 10px					
+
+				.sendtomail
+					float: right
+					padding: 7px 27px 8px
+					background: #d06057
+					color: #fff
+					+OpenSansSB
+					font-size: 14px
+
+				.sendtomail:hover
+					background: #a64d46
+
+		.tablebusy
+			clear: both
+			padding-left: 60px
+			margin-top: 95px
+			padding-bottom: 35px
+			+OpenSans
+			font-size: 14px
+			color: #8d8d8d
+			position: relative
+			border-bottom: 1px dashed #c4c4c4
+
+		.tablebusy:before
+			content: ' '
+			+s(lightning)
+			position: absolute
+			top: 0px
+			left: 0px
+
+		.recommended
+			text-align: center
+			+OpenSans
+
+			p
+				font-size: 16px
+				margin-top: 24px
+				margin-bottom: 21px
+				color: #000
+
+				span
+					+OpenSansSB
+
+			.recomended__rest
+				width: 108px
+				display: inline-block
+				vertical-align: top
+				margin-left: 9px
+				margin-right: 9px
+
+				a
+					font-size: 14px
+					color: #212022
+					margin-top: 14px					
+
+				a:hover
+					text-decoration: underline
+
+		.agreementoferta			
+			border-bottom: 1px dashed #c4c4c4			
+
+			.agreementoferta__container
+				height: 325px
+				color: #000
+				margin-top: 20px
+				overflow: auto
+				padding-right: 5px
+				margin-bottom: 20px
+
+				span
+					+OpenSansSB
+					font-size: 16px				
+
+				p
+					+OpenSans
+					font-size: 14px
+					color: #717171
+					margin-top: 18px
+					margin-bottom: 18px
