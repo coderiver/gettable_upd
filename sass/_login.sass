@@ -1,0 +1,223 @@
+.shadow
+	width: 100%
+	height: 36px
+	background: url(../img/icons/login_bg.png) no-repeat 50% top
+	position: absolute
+	top: 0px	
+
+.login
+	margin-top: -40px
+	position: relative
+
+.login__container
+	width: 1000px
+	margin: 0 auto
+	border-bottom: 1px solid #c7c9ca	
+	padding-left: 90px
+	padding-right: 50px
+	overflow: hidden
+
+	.login__close
+		+s(close_small)
+		display: block
+		position: absolute
+		top: 20px
+		right: 130px
+		z-index: 200
+
+	.login__close:hover
+		+s(close_dark)
+	
+.login__enterphone
+	display: block
+	float: left
+	width: 465px
+	+OpenSans
+	margin-top: 50px
+	margin-right: 65px
+	line-height: 27px	
+	
+	.login__header
+		font-size: 24px		
+
+	.onphonenumber
+		+OpenSansL
+		font-size: 20px
+
+	.inputphone
+		position: relative			
+		margin-top: 18px
+		margin-bottom: 20px
+		overflow: hidden		
+
+		.inputphone__countrycode
+			position: absolute
+			left: 12px
+			top: 11px
+			+OpenSansSB
+			font-size: 20px
+
+		.inputphone__number
+			border: 1px solid #c4c4c4
+			border-radius: 5px				
+			color: #8f8f8f
+			+OpenSans
+			font-size: 20px		
+			width: 174px
+			height: 21px
+			padding: 12px 20px 12px 46px
+			margin-right: 15px
+			float: left
+
+		.wrong
+			border: 1px solid #d52900
+			+OpenSansSB
+			color: #000
+
+		.right
+			border: 1px solid #c4c4c4
+			+OpenSansSB
+			color: #000
+
+		.logon
+			padding: 12px 25px 7px
+			+geinspB
+			font-size: 15px
+			text-transform: uppercase
+			color: #fff
+			background: #d32900
+			box-shadow: 0px 2px 2px #aa4f3a
+			border-radius: 5px
+			letter-spacing: 2px
+			float: left
+
+		.logon:hover
+			background: #ba2501
+
+		.sendagain
+			padding: 12px 0px 7px
+			+geinspB
+			font-size: 15px
+			text-transform: uppercase
+			color: #fff
+			background: #c2c2c2
+			box-shadow: 0px 2px 2px #9e9e9e
+			border-radius: 5px
+			letter-spacing: 2px
+			width: 180px
+			text-align: center
+			float: left
+
+		.sendagain:hover
+			background: #b2b2b2
+
+	.wrongcode
+		+OpenSans
+		font-size: 14px
+		color: #d0401d
+		line-height: 20px
+		letter-spacing: 1.3px
+		margin-bottom: 18px
+		padding-left: 4px
+
+	.numbersecret
+		clear: both
+		+OpenSansL
+		font-size: 16px
+		color: #666666
+
+	.login__secretcode
+		+OpenSans
+		font-size: 20px
+		color: #000
+		line-height: 20px
+
+	.during
+		+OpenSansL
+		font-size: 14px
+		color: #0a090a
+
+	.inputsecretcode
+		position: relative			
+		margin-top: 18px
+		margin-bottom: 20px
+		overflow: hidden
+
+		.inputsecretcode__number
+			border: 1px solid #c4c4c4
+			border-radius: 5px				
+			color: #8f8f8f
+			+OpenSans
+			font-size: 25px
+			width: 208px
+			height: 21px
+			padding: 12px 20px 12px 10px
+			margin-right: 15px
+			float: left			
+
+		.confirm
+			padding: 12px 0px 7px
+			+geinspB
+			font-size: 15px
+			text-transform: uppercase
+			color: #fff
+			background: #e12c00
+			box-shadow: 0px 2px 2px #aa4f3a
+			border-radius: 5px
+			letter-spacing: 2px
+			float: left
+			width: 180px
+			text-align: center
+
+		.confirm:hover
+			background: #ba2501
+
+	.load
+		height: 26px
+		display: block
+		background: url(../img/icons/loader.gif) no-repeat 50%
+
+.login__incabinet
+
+	background: #dfdddc
+	overflow: hidden
+	width: 290px
+	padding: 50px 100px 45px 80px
+	+OpenSans	
+
+	.login__header
+		font-size: 24px
+
+	.login__advantage
+		+OpenSansL
+		font-size: 18px
+		margin-top: 30px
+
+		p			
+			padding: 20px 0px 18px 70px
+			width: 185px
+			position: relative
+
+		.with-border
+			border-bottom: 1px solid #cfcfcf
+
+		.login__save:before
+			content: ''
+			+s(save)
+			position: absolute
+			top: 22px
+			left: 0px
+
+		.login__control:before
+			content: ''
+			+s(control)
+			position: absolute
+			top: 20px
+			left: 0px
+
+		.login__bonus:before
+			content: ''
+			+s(bonus)
+			position: absolute
+			top: 15px
+			left: 0px
