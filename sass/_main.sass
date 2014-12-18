@@ -161,6 +161,8 @@
 
 	.menu
 		margin-top: 40px
+		padding-left: 10px
+		padding-right: 10px		
 
 		.menu__header
 			text-align: center
@@ -170,59 +172,86 @@
 
 		.menu__type
 			margin-top: 90px
-			text-transform: uppercase
-			margin-left: 65px
-			position: relative
+			text-transform: uppercase			
+			position: relative			
 
 			li
 				display: inline-block
 				margin: 0 14px
 
 			li:hover > ul
-				display: block			
+				display: block
 
-			.menu__winter
-				+OpenSansSB
-				text-align: center
-				font-size: 16px
-				color: #2e5883
-				padding: 40px 9px 5px
-				+png(icons/winter)
-				background-position: 50% 0
-
-			.is-active-w
-				border-bottom: 2px solid #2e5883
-
-			.menu__base
+			.menu__item
 				+OpenSans
 				font-size: 16px
-				color: #616161
-				padding: 40px 9px 5px
+				color: #616161				
+			
+			.menu__baseg
 				+png(icons/base)
-				background-position: 50% 0				
-
-			.menu__base:hover				
-				color: #080808
+				background-position: 50% 0
+				padding: 40px 9px 5px				
+			
+			.menu__baseg:hover
 				+png(icons/base_hover)
+				background-position: 50% 0				
+				color: #080808
+
+			.menu__baseb
+				+png(icons/base-blue)
+				background-position: 50% 0
+				padding: 40px 9px 5px
+				color: #4277ad
+				border-bottom: 2px solid #4277ad
+
+			.menu__wineg
+				padding: 40px 9px 5px
+				+png(icons/wine)
 				background-position: 50% 0
 
-			.menu__other
-				+OpenSans
-				font-size: 16px
-				color: #616161
-				padding: 0px 20px 8px
-				+png(icons/other)
-				background-position: right 8px			
+			.menu__winer
+				padding: 40px 9px 5px
+				+png(icons/wine-red)
+				background-position: 50% 0
+				color: #b24242
+				border-bottom: 2px solid #b24242
 
-			.menu__other:hover
+			.menu__wineg:hover				
 				color: #080808
-				+png(icons/other_hover)
-				background-position: right 8px			
+				+png(icons/wine_hover)
+				background-position: 50% 0
+
+			.menu__winered				
+				padding: 40px 9px 5px
+				+png(icons/wine)
+				background-position: 50% 0
+
+			.menu__other				
+				display: block
+				max-width: 120px
+				position: relative
+
+				.icon-other:after
+					content: ''
+					+s(other)					
+					position: absolute
+					bottom: 6px
+					right: -22px
+			
+			.menu__other:hover
+				color: #080808				
+
+			.menu__other:hover .icon-other:after
+				content: ''
+				+s(other_hover)					
+				position: absolute
+				bottom: 6px
+				right: -22px
 
 			.other
 				position: absolute
 				right: 0px
-				top: 30px
+				bottom: -165px
 				text-align: right
 				background: #f0f0f0
 				width: 310px
@@ -259,30 +288,39 @@
 				margin-top: 38px
 				margin-bottom: 26px
 
-			.menu__pos	
+			.menu__pos
 				border-bottom: 1px dashed #aaaaaa
 				margin-bottom: 34px
+				padding-top: 10px
+				position: relative
 
-				span
-					position: relative					
-					background: #e3e3e3	
-					top: 5px
+				.menu__container
+					width: 520px					
 
-				.dish
-					+OpenSans
-					font-size: 14px					
+					span					
+						background: #e3e3e3					
+						bottom: -5px
 
-				.weight
-					color: #717171
-					+OpenSans
-					font-size: 12px
-					padding: 0 8px 0 3px
-												
-				.price			
-					float: right
-					+OpenSansL
-					font-size: 14px
-					padding-left: 8px
+					.dish
+						+OpenSans
+						font-size: 14px
+						position: relative
+						line-height: 12px												
+
+					.weight
+						color: #717171
+						+OpenSans
+						font-size: 12px
+						padding: 0 5px 0 5px
+						position: absolute						
+						line-height: normal
+													
+					.price					
+						+OpenSansL
+						font-size: 14px
+						padding-left: 5px
+						position: absolute
+						right: 0px						
 
 		.menu__all
 			+OpenSansL
@@ -293,7 +331,6 @@
 
 		.menu__all:hover
 			color: #000
-
 
 	.comments
 		margin-top: 120px
@@ -478,15 +515,19 @@
 		margin-bottom: 22px
 
 		.restaurant__info		
-			padding: 14px 18px 0 18px
+			padding: 14px 17px 0 17px
 
 			.restaurant__header
-				margin-bottom: 15px
+				margin-bottom: 15px				
 
 				a
 					font-size: 23px
 					color: #000
 					margin-bottom: 10px
+					display: inline-block
+					width: 210px
+					margin-top: 4px
+					line-height: 25px
 
 				a:hover
 					color: #a84027
@@ -533,31 +574,32 @@
 
 		.ribbon-red
 			+s(ribbon_red)
-			+geinspB			
+			+geinsp
 			color: #fff
-			font-weight: 100
-			font-size: 18px
+			font-weight: 600
+			font-size: 17.5px
 			padding-top: 5px
 			text-align: center
 			position: absolute
 			top: 8px
 			right: -14px
 			padding-left: 8px
-			text-shadow: 1px 1px 3px #891b00
+			text-shadow: 1px 1px 2px #891b00
 
 		.ribbon-yellow
 			+s(ribbon_yellow)
-			+geinspB			
+			+geinsp
 			color: #fff	
-			font-weight: 100		
-			font-size: 18px
+			font-weight: 600
+			font-size: 17px
 			padding-top: 5px
 			text-align: center
 			position: absolute
 			top: 8px
 			right: -14px
 			padding-left: 8px
-			text-shadow: 1px 1px 3px #956010
+			text-shadow: 1px 1px 2px #b16d00
+			letter-spacing: 0.8px
 
 	.read_more
 		+geinsp
@@ -713,7 +755,7 @@
 .tenplace
 	width: 1067px
 	margin: 0 auto
-	border-bottom: 1px solid #aaaaaa
+	border-bottom: 1px solid #c7c9ca
 	overflow: hidden	
 	margin-bottom: 38px	
 	padding: 0px 34px 0px 34px	
