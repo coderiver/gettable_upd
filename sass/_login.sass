@@ -3,30 +3,38 @@
 	height: 36px
 	background: url(../img/icons/login_bg.png) no-repeat 50% top
 	position: absolute
+	left: 0px
 	top: 0px	
 
-.login
-	margin-top: -40px
+.login	
 	position: relative
+	width: 100%
+	margin: 0 auto
+	max-width: 1434px
+	min-width: 1020px
 
 .login__container
-	width: 1000px
-	margin: 0 auto
-	border-bottom: 1px solid #c7c9ca	
-	padding-left: 90px
-	padding-right: 50px
-	overflow: hidden
+	width: 100%
+	max-width: 1140px
+	margin: 0 auto		
+	border-bottom: 1px solid #c7c9ca
+	position: relative
+
+.login__inner
+	width: 100%
+	max-width: 1000px
+	margin: 0 auto	
 
 	.login__close
-		+s(close_small)
+		+s(close_login)
 		display: block
 		position: absolute
 		top: 20px
-		right: 130px
+		right: 20px
 		z-index: 200
 
 	.login__close:hover
-		+s(close_dark)
+		+s(close_login_hover)
 	
 .login__enterphone
 	display: block
@@ -178,7 +186,7 @@
 		background: url(../img/icons/loader.gif) no-repeat 50%
 
 .login__incabinet
-
+	position: relative
 	background: #dfdddc
 	overflow: hidden
 	width: 290px
